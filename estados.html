@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi pedido</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <span class="logo">Universidad del Mar</span>
+      <span class="icon">👤</span>
+    </div>
+  </header>
+
+  <main>
+    <h1>Mi pedido</h1>
+
+    <div class="tabs">
+      <button class="tab active" data-filter="todos">Todo (5)</button>
+      <button class="tab" data-filter="procesando">Preparando (1)</button>
+      <button class="tab" data-filter="espera">En espera (1)</button>
+      <button class="tab" data-filter="completado">Entregado (2)</button>
+      <button class="tab" data-filter="cancelado">Cancelado (1)</button>
+    </div>
+
+    <div class="table">
+      <div class="table-row header-row">
+        <div class="checkbox-col"></div>
+        <div class="col">Pedido</div>
+        <div class="col">Fecha</div>
+        <div class="col">Estado</div>
+      </div>
+
+      <div class="table-row" data-status="completado">
+        <div class="checkbox-col"><input type="checkbox"></div>
+        <div class="col">Pechuga a la plancha</div>
+        <div class="col">05 May,2025</div>
+        <div class="col"><span class="status completado">Entregado</span></div>
+      </div>
+
+      <div class="table-row" data-status="espera">
+        <div class="checkbox-col"><input type="checkbox"></div>
+        <div class="col">Torta</div>
+        <div class="col">05 May,2025</div>
+        <div class="col"><span class="status espera">En espera</span></div>
+      </div>
+
+      <div class="table-row" data-status="procesando">
+        <div class="checkbox-col"><input type="checkbox"></div>
+        <div class="col">Ensalada</div>
+        <div class="col">05 May,2025</div>
+        <div class="col"><span class="status procesando">Preparando</span></div>
+      </div>
+
+      <div class="table-row" data-status="completado">
+        <div class="checkbox-col"><input type="checkbox"></div>
+        <div class="col">Pechuga empanizada</div>
+        <div class="col">05 May,2025</div>
+        <div class="col"><span class="status completado">Entregado</span></div>
+      </div>
+
+      <div class="table-row" data-status="cancelado">
+        <div class="checkbox-col"><input type="checkbox"></div>
+        <div class="col">Huevos</div>
+        <div class="col">05 May,2025</div>
+        <div class="col"><span class="status cancelado">Cancelado</span></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
