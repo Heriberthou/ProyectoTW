@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Menú Cafetería</title>
     
     <!-- CDN de Bootstrap -->
@@ -10,7 +10,295 @@
     
     <!-- Google Fonts para usar una tipografía más bonita -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href ="css/style.css" rel="stylesheet">
+
+    <!-- Estilos CSS directamente en el HTML -->
+    <style>
+        /* Para evitar desplazamiento horizontal */
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Estilos para el Header con fondo blanco */
+        .uni-header {
+            background-color: white; /* Fondo blanco */
+            padding: 20px 0; /* Espaciado superior e inferior */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
+            display: flex;
+            justify-content: space-between; /* Para distribuir los elementos en línea */
+            align-items: center; /* Centra los elementos verticalmente */
+            flex-wrap: wrap; /* Asegura que el contenido se ajuste en pantallas pequeñas */
+        }
+
+        .uni-header .logo {
+            max-height: 70px; /* Ajustar tamaño del logo */
+            width: auto; /* Asegura que el logo no distorsione */
+        }
+
+        .uni-header .middle-img {
+            max-height: 60px; /* Ajustar tamaño de la imagen central */
+            width: auto; /* Asegura que la imagen central no distorsione */
+        }
+
+        .uni-header .right-img {
+            max-height: 60px; /* Ajustar tamaño de la imagen en la esquina derecha */
+            width: auto; /* Asegura que la imagen derecha no distorsione */
+        }
+
+        /* Hero header con imagen de fondo sin texto encima */
+        .hero-header {
+            background-image: url('imagenes/fondo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50vh; /* Mantener altura para pantallas grandes */
+        }
+
+        /* Estilos para el mensaje de bienvenida debajo de la imagen */
+        .bienvenida {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            color: #333;
+        }
+
+        .bienvenida h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            color: #05203d;
+            font-weight: 600;
+        }
+
+        /* Estilos para los botones */
+        .bienvenida .btn {
+            background-color: #041e4e; /* Fondo azul */
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bienvenida .btn:hover {
+            background-color: #216288; /* Cambio a un azul más claro en hover */
+        }
+
+        /* Estilos para el texto que invita a registrarse */
+        .bienvenida .texto-registro {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la sección de introducción al registro */
+        .registro-intro {
+            background-color: #f1f8ff;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .registro-intro h3 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #05203d;
+            text-align: center;
+        }
+
+        .registro-intro p {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .registro-intro ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .registro-intro ul li {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .registro-intro .row {
+            margin-top: 30px;
+        }
+
+        .registro-intro .col-md-3 {
+            padding: 15px;
+        }
+
+        .registro-intro .col-md-3 img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .registro-intro .btn-primary {
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background-color: #041e4e; /* Azul de la universidad */
+            color: white;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        /* Formulario de registro oculto por defecto */
+        .form-container {
+            display: none;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-container .btn-cancel {
+            background-color: #459fe3; /* Color rojo para el botón de cancelar */
+            color: white;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            width: 100%; /* Asegura que ambos botones tengan el mismo tamaño */
+            max-width: 250px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container .btn-primary {
+            background-color: #041e4e; /* Color azul de la universidad para registrar */
+            color: white;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 30px;
+            text-transform: uppercase;
+            width: 100%; /* Asegura que ambos botones tengan el mismo tamaño */
+            max-width: 250px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-between; /* Alinea los botones a los extremos */
+        }
+
+        .d-flex .btn {
+            width: 48%; /* Hace que cada botón ocupe el 48% del espacio disponible */
+        }
+
+        .form-container .btn-cancel:hover {
+            background-color: #9ad1f2; /* Cambio de color cuando pasa el mouse */
+        }
+
+        .form-container .btn-primary:hover {
+            background-color: #216288; /* Cambio de color cuando pasa el mouse */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #041e4e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #216288;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-header {
+                height: 35vh; /* Reducir altura para pantallas más pequeñas */
+            }
+            
+            .bienvenida h2 {
+                font-size: 2rem; /* Reducir tamaño de texto en pantallas pequeñas */
+            }
+
+            .bienvenida .btn {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+
+            .registro-intro h3 {
+                font-size: 2rem;
+            }
+
+            .registro-intro .btn {
+                font-size: 1.1rem;
+            }
+
+            .form-container {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .form-container h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-header {
+                height: 30vh; /* Reducir más la altura en pantallas muy pequeñas */
+            }
+
+            .bienvenida h2 {
+                font-size: 1.5rem;
+            }
+
+            .bienvenida .btn {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            .registro-intro h3 {
+                font-size: 1.5rem;
+            }
+
+            .registro-intro .btn {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -52,7 +340,7 @@
 
     <!-- Formulario de registro (inicialmente oculto) -->
     <div class="form-container" id="registerForm">
-        <h2 class="text-center">Formulario de Registro</h2>
+        <h2>Formulario de Registro</h2>
         <form action="procesar_registro.php" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre Completo</label>
@@ -70,7 +358,12 @@
                 <label for="confirm-password">Confirmar Contraseña</label>
                 <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+            
+            <!-- Fila con los botones de registrar y cancelar -->
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="button" id="cancelButton" class="btn btn-cancel">Cancelar</button>
+            </div>
         </form>
     </div>
 
@@ -92,12 +385,18 @@
     <!-- Iconos FontAwesome para redes sociales -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <!-- Script para mostrar el formulario de registro al hacer clic en el enlace -->
+    <!-- Script para mostrar el formulario de registro y cancelar -->
     <script>
         document.getElementById('showRegisterForm').addEventListener('click', function() {
             document.getElementById('registerForm').style.display = 'block';  // Mostrar el formulario de registro
             document.querySelector('.bienvenida').style.display = 'none'; // Ocultar la bienvenida
             document.querySelector('.registro-intro').style.display = 'none'; // Ocultar la introducción
+        });
+
+        document.getElementById('cancelButton').addEventListener('click', function() {
+            document.getElementById('registerForm').style.display = 'none';  // Ocultar el formulario de registro
+            document.querySelector('.bienvenida').style.display = 'block'; // Mostrar la bienvenida
+            document.querySelector('.registro-intro').style.display = 'block'; // Mostrar la introducción
         });
     </script>
 
