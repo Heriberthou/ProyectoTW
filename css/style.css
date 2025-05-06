@@ -1,12 +1,12 @@
-        /* Estilos para el Header con fondo blanco */
-        .uni-header {
-            background-color: white; /* Fondo blanco */
-            padding: 20px 0; /* Espaciado superior e inferior */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
-            display: flex;
-            justify-content: space-between; /* Para distribuir los elementos en línea */
-            align-items: center; /* Centra los elementos verticalmente */
-        }
+/* Estilos para el Header con fondo blanco */
+.uni-header {
+    background-color: white; /* Fondo blanco */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
+    display: flex;
+    justify-content: space-between; /* Para distribuir los elementos en línea */
+    align-items: center; /* Centra los elementos verticalmente */
+}
 
         .uni-header .logo {
             max-height: 80px; /* Ajusta el tamaño del logo */
