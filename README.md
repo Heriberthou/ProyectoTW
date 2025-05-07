@@ -1,0 +1,77 @@
+# Sistema Web para La Café - Universidad del Mar
+
+Este proyecto es una plataforma web desarrollada para **La Café** de la Universidad del Mar. 
+Permite a los usuarios **explorar el menú**, **realizar pedidos personalizados**, **registrar platillos**, y enviar **sugerencias** para mejorar el servicio. 
+Está enfocado tanto en la experiencia del **usuario final** como en la gestión operativa.
+
+## Objetivo
+
+Brindar una solución digital accesible y moderna para mejorar el proceso de atención y pedidos en la cafetería universitaria, con una interfaz limpia, intuitiva y funcional.
+
+## Funcionalidades
+
+- Registro e inicio de sesión de usuarios.
+- Visualización de menú (desayunos, comidas, bebidas).
+- Realización de pedidos con opciones personalizadas.
+- Envío de sugerencias y calificación del servicio.
+- Gestión de pedidos con estado: *Preparando*, *Entregado*, *Cancelado*.
+- Registro de nuevos platillos con imagen, precio y descripción.
+
+## Tecnologías utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Bootstrap 5**
+- **jQuery**
+
+##  Estructura del proyecto
+
+/la-cafe
+├── index.html # Página principal de inicio
+├── login.html # Inicio de sesión
+├── registro.html # Registro de usuarios
+├── menu.html # Menú de alimentos
+├── pedidos.html # Visualización de pedidos
+├── sugerencias.html # Envío de sugerencias
+├── registrar-platillo.html # Registro de platillos
+├── css/
+│ └── estilos.css
+├── js/
+│ └── script.js
+├── images/
+│ └── (logos)
+└── README.md
+
+
+## ¿Cómo usar?
+
+Navega entre las secciones para probar funcionalidades como:
+
+Ver menú del día
+
+Personalizar pedido
+
+Registrar platillos
+
+Enviar sugerencias
+
+👤 Autores: 
+CORTES PEREZ IVAN ALEXANDER
+GALVAN GERMAN ALONDRA
+GOMEZ BOLAINA HERIBERTO
+LOPEZ CRUZ NELIDA
+QUINTAS ROJAS ABRIL AZENETH
+
+Universidad: Universidad del Mar
+
+Contacto: 
+ivanalexander.cortesperez@aulavirual.umar.mx
+alondra.galvan german@aulavirual.umar.mx
+heriberto.gomez bolaina@aulavirual.umar.mx
+nelida.lopez cruz@aulavirual.umar.mx
+abrilazeneth.quintasrojas@aulavirual.umar.mx
+
+
+📄 Licencia
+Este proyecto es de uso educativo y puede ser adaptado para otros contextos escolares o universitarios.
