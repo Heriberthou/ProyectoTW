@@ -67,9 +67,9 @@ Universidad: Universidad del Mar
 
 Contacto: 
 ivanalexander.cortesperez@aulavirual.umar.mx
-alondra.galvan german@aulavirual.umar.mx
-heriberto.gomez bolaina@aulavirual.umar.mx
-nelida.lopez cruz@aulavirual.umar.mx
+alondra.galvangerman@aulavirual.umar.mx
+heriberto.gomezbolaina@aulavirual.umar.mx
+nelida.lopezcruz@aulavirual.umar.mx
 abrilazeneth.quintasrojas@aulavirual.umar.mx
 
 
