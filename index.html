@@ -61,6 +61,42 @@
             max-height: 100px;
             width: auto;
         }
+
+        .explorar-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .explorar-item {
+            flex: 0 0 auto;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 1rem;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            min-width: 120px;
+        }
+
+        .explorar-item.active {
+            background-color: #004B7F;
+            color: white;
+        }
+
+        .explorar-item img {
+            max-height: 70px;
+            display: block;
+            margin: 0 auto 0.5rem;
+        }
+
+        .site-title {
+            margin-bottom: 0.3rem;
+        }
+
+        .site-subtitle {
+            margin-bottom: 1.2rem;
+        }
     </style>
 </head>
 
@@ -85,28 +121,23 @@
                         <div class="la-cafe-brand">La Café</div>
                         <div class="menu-divider"></div>
                     </div>
-                    <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door-fill"></i> Menú
-                            Principal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search-heart"></i> Explorar</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-basket-fill"></i> Mi Pedido</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-house-door-fill"></i> Menú Principal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search-heart"></i> Explorar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-basket-fill"></i> Mi Pedido</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cup-straw"></i> Bebidas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-lightbulb-fill"></i>
-                            Sugerencias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i>
-                            Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-lightbulb-fill"></i> Sugerencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-envelope-fill"></i> Contáctanos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container text-center py-3">
+    <div class="container text-center py-2">
         <h1 class="site-title">La Café</h1>
         <p class="site-subtitle">Campus Puerto Escondido</p>
     </div>
 
-    <main class="container my-5">
+    <main class="container my-4">
         <section aria-labelledby="menu-principal">
             <h2 id="menu-principal">Menú principal</h2>
             <div class="btn-toggle-wrapper mb-4">
@@ -123,10 +154,49 @@
 
         <section aria-labelledby="explorar">
             <h2 id="explorar">Explorar</h2>
+            <div class="explorar-scroll">
+                <div class="explorar-item active" onclick="seleccionarExplorar(this)">
+                    <img src="imagenes/huevos.png" alt="Huevos">
+                    <div>Huevos</div>
+                </div>
+                <div class="explorar-item" onclick="seleccionarExplorar(this)">
+                    <img src="imagenes/ensalada.png" alt="Ensalada">
+                    <div>Ensalada</div>
+                </div>
+                <div class="explorar-item" onclick="seleccionarExplorar(this)">
+                    <img src="imagenes/torta.png" alt="Tortas">
+                    <div>Tortas</div>
+                </div>
+                <div class="explorar-item" onclick="seleccionarExplorar(this)">
+                    <img src="imagenes/sandwich.png" alt="Sándwich">
+                    <div>Sándwich</div>
+                </div>
+            </div>
         </section>
-
         <section aria-labelledby="bebidas">
             <h2 id="bebidas">Bebidas</h2>
+            <div class="explorar-scroll">
+                <div class="explorar-item active">
+                    <img src="imagenes/jugo.png" alt="Jugo">
+                    <div>Jugo</div>
+                </div>
+                <div class="explorar-item">
+                    <img src="imagenes/cafe.png" alt="Café">
+                    <div>Café</div>
+                </div>
+                <div class="explorar-item">
+                    <img src="imagenes/agua.png" alt="Agua">
+                    <div>Agua</div>
+                </div>
+                <div class="explorar-item">
+                    <img src="imagenes/leche.png" alt="Leche">
+                    <div>Leche</div>
+                </div>
+                <div class="explorar-item">
+                    <img src="imagenes/licuado.png" alt="Licuado">
+                    <div>Licuado</div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -153,6 +223,11 @@
                 comida: [{ nombre: "Tlayuda", descripcion: "Con tasajo, quesillo y frijoles.", imagen: "imagenes/tlayuda.png" }]
             }
         };
+
+        function seleccionarExplorar(elemento) {
+            document.querySelectorAll('.explorar-item').forEach(el => el.classList.remove('active'));
+            elemento.classList.add('active');
+        }
 
         document.addEventListener("DOMContentLoaded", () => {
             const dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
