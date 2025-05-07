@@ -29,18 +29,31 @@ Brindar una solución digital accesible y moderna para mejorar el proceso de ate
 
 /la-cafe
 ├── index.html # Página principal de inicio
+
 ├── login.html # Inicio de sesión
+
 ├── registro.html # Registro de usuarios
+
 ├── menu.html # Menú de alimentos
+
 ├── pedidos.html # Visualización de pedidos
+
 ├── sugerencias.html # Envío de sugerencias
+
 ├── registrar-platillo.html # Registro de platillos
+
 ├── css/
+
 │ └── estilos.css
+
 ├── js/
+
 │ └── script.js
+
 ├── images/
+
 │ └── (logos)
+
 └── README.md
 
 
@@ -71,9 +84,13 @@ Universidad: Universidad del Mar
 
 Contacto: 
 ivanalexander.cortesperez@aulavirual.umar.mx
+
 alondra.galvangerman@aulavirual.umar.mx
+
 heriberto.gomezbolaina@aulavirual.umar.mx
+
 nelida.lopezcruz@aulavirual.umar.mx
+
 abrilazeneth.quintasrojas@aulavirual.umar.mx
 
 
