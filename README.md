@@ -82,7 +82,8 @@ QUINTAS ROJAS ABRIL AZENETH
 
 Universidad: Universidad del Mar
 
-Contacto: 
+Contactos:
+
 ivanalexander.cortesperez@aulavirual.umar.mx
 
 alondra.galvangerman@aulavirual.umar.mx
