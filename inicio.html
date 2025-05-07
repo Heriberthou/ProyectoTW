@@ -367,6 +367,20 @@
         </form>
     </div>
 
+
+    <script>
+        // Mostrar formulario si URL contiene ?registro=1
+        window.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('registro') === '1') {
+                document.getElementById('registerForm').style.display = 'block';
+                document.querySelector('.bienvenida').style.display = 'none';
+                document.querySelector('.registro-intro').style.display = 'none';
+            }
+        });
+    </script>
+    
+
     <!-- Footer con información adicional -->
     <footer>
         <div class="container">
