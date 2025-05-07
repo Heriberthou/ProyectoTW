@@ -28,32 +28,20 @@ Brindar una solución digital accesible y moderna para mejorar el proceso de ate
 ##  Estructura del proyecto
 
 /la-cafe
+
 ├── index.html # Página principal de inicio
-
 ├── login.html # Inicio de sesión
-
 ├── registro.html # Registro de usuarios
-
 ├── menu.html # Menú de alimentos
-
 ├── pedidos.html # Visualización de pedidos
-
 ├── sugerencias.html # Envío de sugerencias
-
 ├── registrar-platillo.html # Registro de platillos
-
 ├── css/
-
 │ └── estilos.css
-
 ├── js/
-
 │ └── script.js
-
 ├── images/
-
 │ └── (logos)
-
 └── README.md
 
 
