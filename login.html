@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
     <style>
+        /* Estilos del formulario y diseño (sin cambios) */
         html, body {
             height: 100%;
             margin: 0;
@@ -135,7 +136,7 @@
     <main>
         <div class="login-container">
             <h2>Iniciar Sesión</h2>
-            <form action="procesar_login.php" method="POST">
+            <form id="loginForm">
                 <div class="form-group mb-3">
                     <label for="email">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" name="email" required>
@@ -150,6 +151,14 @@
                 </div>
             </form>
             <a href="inicio.html?registro=1" class="btn-link">¿No tienes cuenta? Regístrate aquí</a>
+            <!-- Error Message -->
+            <div id="error-message" class="alert alert-danger mt-3 d-none" role="alert">
+                Usuario o contraseña incorrectos.
+            </div>
+            <!-- Success Message -->
+            <div id="success-message" class="alert alert-success mt-3 d-none" role="alert">
+                ¡Bienvenido! Has iniciado sesión correctamente.
+            </div>
         </div>
     </main>
 
@@ -161,8 +170,34 @@
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script para cambio de color y redirección -->
+    <!-- Script para validación -->
     <script>
+        const validUser = "usuario@prueba.com";
+        const validPassword = "contraseña123";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const errorMessage = document.getElementById("error-message");
+            const successMessage = document.getElementById("success-message");
+
+            // Limpiar mensajes
+            errorMessage.classList.add("d-none");
+            successMessage.classList.add("d-none");
+
+            // Comprobar si las credenciales son correctas
+            if (email === validUser && password === validPassword) {
+                window.location.href = "index.html";
+
+            } else {
+                errorMessage.classList.remove("d-none");
+            }
+        });
+
+        // Acción de cancelar
         document.getElementById("cancelarBtn").addEventListener("click", function () {
             this.classList.add("btn-cancel-clicked");
             setTimeout(() => {
@@ -170,5 +205,6 @@
             }, 300); // Redirige después de 300 ms
         });
     </script>
+
 </body>
 </html>
