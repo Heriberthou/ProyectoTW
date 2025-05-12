@@ -200,5 +200,26 @@
     </script>
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const nombre = params.get('platillo');
+      const imagen = params.get('imagen');
+      const precio = params.get('precio');
+  
+      if (nombre && imagen && precio) {
+        document.querySelector('.pedido-img').src = imagen;
+        document.querySelector('.pedido-img').alt = nombre;
+        document.querySelector('.card-body h6').textContent = nombre;
+        document.querySelector('.card-body p.text-muted').textContent = `$${parseFloat(precio).toFixed(2)} MXN`;
+  
+        // También en el modal
+        document.getElementById('modalExtras').textContent = 'Tortillas'; // fijo por ahora
+        document.getElementById('modalTotal').textContent = `$${parseFloat(precio).toFixed(2)} MXN`;
+        document.querySelector('#modalConfirmacion .modal-body p:nth-child(2) span')?.remove(); // eliminar texto estático
+        document.querySelector('#modalConfirmacion .modal-body p:nth-child(2)').innerHTML = `<strong>Platillo:</strong> ${nombre}`;
+      }
+    });
+  </script>  
 </body>
 </html>

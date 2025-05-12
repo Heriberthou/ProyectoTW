@@ -66,19 +66,24 @@ h2 {
     padding: 1rem;
     transition: background-color 0.3s;
     cursor: pointer;
-    min-width: 120px;
+    min-width: 100px;
+    background-color: #f8f9fa;
+    height: 130px;
 }
+
+.explorar-item img {
+    max-height: 60px;
+    display: block;
+    margin: 0 auto 0.2rem;
+}
+
 
 .explorar-item.active {
     background-color: #004B7F;
     color: white;
 }
 
-.explorar-item img {
-    max-height: 70px;
-    display: block;
-    margin: 0 auto 0.5rem;
-}
+
 
 .site-title {
     margin-bottom: 0.3rem;
