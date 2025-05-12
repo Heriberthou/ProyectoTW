@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalUnidades = document.getElementById("totalUnidades");
 
   function actualizarResumen() {
+    if (!subtotalSpan || !totalSpan || !totalUnidades) return;
+
     let subtotal = 0;
     let totalProductos = 0;
 
@@ -97,15 +99,23 @@ $(document).ready(function () {
 
   // Confirmar en el modal
   $('#confirmarPedido').click(function () {
-    alert("Pedido confirmado correctamente");
-    location.reload(); 
+    Swal.fire({
+      icon: 'success',
+      title: '¡Pedido confirmado!',
+      text: 'Tu pedido ha sido registrado correctamente.',
+      confirmButtonColor: '#198754'
+    });
+    setTimeout(() => location.reload(), 2000);
   });
 
   // Cancelar pedido
   $('#cancelarPedido').click(function () {
-    alert("El Pedido fue cancelado");
-    location.reload(); 
+    Swal.fire({
+      icon: 'info',
+      title: 'Pedido cancelado',
+      text: 'Has cancelado tu pedido.',
+      confirmButtonColor: '#d33'
+    });
+    setTimeout(() => location.reload(), 2000);
   });
 });
-
-
