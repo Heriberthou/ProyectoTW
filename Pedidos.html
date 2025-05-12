@@ -79,6 +79,42 @@
       </div>
     </div>
 
+    <!-- MODAL DE PAGO -->
+  <div class="modal fade" id="modalPago" tabindex="-1" aria-labelledby="modalPagoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalles del pago</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="moneda" class="form-label">Moneda</label>
+            <select class="form-select" id="moneda">
+              <option value="MXN">MXN (Peso Mexicano)</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="montoPago" class="form-label">Monto con el que paga</label>
+            <input type="number" class="form-control" id="montoPago" placeholder="Ej. 100">
+          </div>
+          <div class="mb-3">
+            <div class="mb-3">
+              <p><strong>Total a pagar:</strong> <span id="montoTotalTexto">$0.00</span></p>
+              <p><strong>Cambio estimado:</strong> <span id="cambioCalculado">$0.00</span></p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Atrás</button>
+          <button class="btn btn-primary" id="btnContinuarConfirmacion">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
     <!-- Modal de Confirmación -->
     <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
       <div class="modal-dialog">
