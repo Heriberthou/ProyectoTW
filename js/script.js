@@ -97,7 +97,6 @@ $(document).ready(function () {
 
   // Confirmar en el modal
   $('#confirmarPedido').click(function () {
-    alert("Pedido confirmado correctamente");
     location.reload(); 
   });
 
@@ -107,5 +106,3 @@ $(document).ready(function () {
     location.reload(); 
   });
 });
-
-
