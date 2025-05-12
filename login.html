@@ -143,7 +143,12 @@
                 </div>
                 <div class="form-group mb-4">
                     <label for="password">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                            👁️
+                        </button>
+                    </div>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
@@ -204,6 +209,17 @@
                 window.location.href = "inicio.html";
             }, 300); // Redirige después de 300 ms
         });
+
+        // Mostrar/ocultar contraseña
+        document.getElementById("togglePassword").addEventListener("click", function () {
+            const passwordField = document.getElementById("password");
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+
+            // Cambiar el ícono del botón (opcional: puedes usar un ícono más sofisticado)
+            this.textContent = type === "password" ? "👁️" : "🙈";
+        });
+
     </script>
 
 </body>
