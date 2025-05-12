@@ -1,21 +1,31 @@
-const tabs = document.querySelectorAll('.tab');
-const rows = document.querySelectorAll('.table-row:not(.header-row)');
+document.addEventListener("DOMContentLoaded", function () {
+  const cantidades = document.querySelectorAll(".cantidad");
+  const precios = document.querySelectorAll(".precio");
+  const subtotalSpan = document.getElementById("subtotal");
+  const totalSpan = document.getElementById("total");
+  const totalUnidades = document.getElementById("totalUnidades");
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
+  function actualizarResumen() {
+    let subtotal = 0;
+    let totalProductos = 0;
 
-    const filter = tab.dataset.filter;
-
-    rows.forEach(row => {
-      if (filter === 'todos' || row.dataset.status === filter) {
-        row.style.display = 'flex';
-      } else {
-        row.style.display = 'none';
-      }
+    cantidades.forEach((select, index) => {
+      const cantidad = parseInt(select.value);
+      const precioUnitario = parseFloat(precios[index].dataset.precio);
+      subtotal += cantidad * precioUnitario;
+      totalProductos += cantidad;
     });
+
+    subtotalSpan.textContent = `$${subtotal.toFixed(2)}`;
+    totalSpan.textContent = `$${subtotal.toFixed(2)}`;
+    totalUnidades.textContent = totalProductos;
+  }
+
+  cantidades.forEach(select => {
+    select.addEventListener("change", actualizarResumen);
   });
+
+  actualizarResumen(); // cálculo inicial
 });
 
 //Contenido para Pedidos: Abril
