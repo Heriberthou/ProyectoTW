@@ -8,96 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .btn-toggle-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        .btn-toggle-container {
-            background-color: #f1f1f7;
-            border-radius: 50px;
-            padding: 4px;
-            display: flex;
-            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-toggle-group button {
-            border-radius: 50px;
-            padding: 0.4rem 2rem;
-            border: none;
-            background-color: transparent;
-            color: #004B7F;
-            font-weight: 500;
-            font-size: 1.2rem;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .btn-toggle-group button.active {
-            background-color: #004B7F;
-            color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-        }
-
-        .img-container {
-            background-color: #004B7F;
-            padding: 1rem;
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 120px;
-            width: 200px;
-        }
-
-        .img-container img {
-            max-height: 100px;
-            width: auto;
-        }
-
-        .explorar-scroll {
-            display: flex;
-            overflow-x: auto;
-            gap: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        .explorar-item {
-            flex: 0 0 auto;
-            text-align: center;
-            border-radius: 1rem;
-            padding: 1rem;
-            transition: background-color 0.3s;
-            cursor: pointer;
-            min-width: 120px;
-        }
-
-        .explorar-item.active {
-            background-color: #004B7F;
-            color: white;
-        }
-
-        .explorar-item img {
-            max-height: 70px;
-            display: block;
-            margin: 0 auto 0.5rem;
-        }
-
-        .site-title {
-            margin-bottom: 0.3rem;
-        }
-
-        .site-subtitle {
-            margin-bottom: 1.2rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -173,13 +83,14 @@
 
     <!-- Botón flotante y modal de sugerencias -->
     <button class="btn btn-primary rounded-pill position-fixed bottom-0 end-0 m-4 d-flex align-items-center gap-2"
-        style="z-index: 1050; background-color: #2266ff; border: none;"
-        data-bs-toggle="modal" data-bs-target="#sugerenciaModal">
+        style="z-index: 1050; background-color: #2266ff; border: none;" data-bs-toggle="modal"
+        data-bs-target="#sugerenciaModal">
         <i class="bi bi-lightbulb-fill text-warning"></i>
         Sugerencias
     </button>
 
-    <div class="modal fade" id="sugerenciaModal" tabindex="-1" aria-labelledby="sugerenciaModalLabel" aria-hidden="true">
+    <div class="modal fade" id="sugerenciaModal" tabindex="-1" aria-labelledby="sugerenciaModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content rounded-4">
                 <div class="modal-header bg-primary text-white rounded-top-4">
@@ -189,7 +100,8 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="sugerenciaTexto" class="form-label">Tu sugerencia:</label>
-                        <textarea class="form-control" id="sugerenciaTexto" rows="3" placeholder="Escribe tu comentario..."></textarea>
+                        <textarea class="form-control" id="sugerenciaTexto" rows="3"
+                            placeholder="Escribe tu comentario..."></textarea>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Calificación:</label>
@@ -208,130 +120,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const platillosEjemplo = {
-            lunes: { desayuno: [{ nombre: "Chilaquiles verdes", descripcion: "Totopos con salsa verde, crema y pollo.", imagen: "imagenes/chilaquiles.png" }], comida: [{ nombre: "Enchiladas rojas", descripcion: "Tortillas con queso y salsa roja.", imagen: "imagenes/enchiladas.png" }] },
-            martes: { desayuno: [{ nombre: "Molletes", descripcion: "Pan con frijoles y queso gratinado.", imagen: "imagenes/molletes.png" }], comida: [{ nombre: "Pescado empanizado", descripcion: "Filete crujiente con arroz.", imagen: "imagenes/pescado.png" }] },
-            miércoles: { desayuno: [{ nombre: "Avena con frutas", descripcion: "Avena caliente con plátano y manzana.", imagen: "imagenes/avena.png" }], comida: [{ nombre: "Albóndigas", descripcion: "Albóndigas de res en chipotle.", imagen: "imagenes/albondigas.png" }] },
-            jueves: { desayuno: [{ nombre: "Tamales", descripcion: "De mole y rajas en hoja de maíz.", imagen: "imagenes/tamales.png" }], comida: [{ nombre: "Pechuga empanizada", descripcion: "Pechuga con verduras y arroz.", imagen: "imagenes/pechuga.png" }] },
-            viernes: { desayuno: [{ nombre: "Pan francés", descripcion: "Pan con miel y canela.", imagen: "imagenes/panfrances.png" }], comida: [{ nombre: "Tlayuda", descripcion: "Con tasajo, quesillo y frijoles.", imagen: "imagenes/tlayuda.png" }] }
-        };
-
-        function seleccionarExplorar(elemento) {
-            document.querySelectorAll('.explorar-item').forEach(el => el.classList.remove('active'));
-            elemento.classList.add('active');
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
-            let diaSimulado = 1;
-            const contenedor = document.getElementById("platillo-del-dia");
-            const textoDia = document.getElementById("diaSimuladoTexto");
-            const btnDesayunos = document.getElementById("btnDesayunos");
-            const btnComidas = document.getElementById("btnComidas");
-            let tipoActual = "desayuno";
-
-            function mostrar(tipo) {
-                const nombreDia = dias[diaSimulado % 7];
-                textoDia.textContent = `Día simulado: ${nombreDia}`;
-                const platillos = platillosEjemplo[nombreDia]?.[tipo] || [];
-                contenedor.innerHTML = "";
-
-                if (platillos.length === 0) {
-                    contenedor.innerHTML = `<p class="text-muted">No hay ${tipo} registrado para hoy (${nombreDia}).</p>`;
-                    return;
-                }
-
-                platillos.forEach(p => {
-                    const precioFijo = tipo === "desayuno" ? 45 : 50;
-                    const card = document.createElement("div");
-                    card.className = "col";
-                    card.innerHTML = `
-                        <div class="card border-0 shadow-sm rounded-4">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="img-container me-3">
-                                    <img src="${p.imagen}" alt="${p.nombre}" class="img-fluid rounded-3">
-                                </div>
-                                <div>
-                                    <h5 class="fw-bold mb-1 text-primary">${p.nombre}</h5>
-                                    <p class="mb-1 small text-muted">${p.descripcion}</p>
-                                    <p class="fw-semibold">$${precioFijo.toFixed(2)}</p>
-                                </div>
-                            </div>
-                        </div>`;
-                    contenedor.appendChild(card);
-                });
-            }
-
-            btnDesayunos.addEventListener("click", () => {
-                tipoActual = "desayuno";
-                btnDesayunos.classList.add("active");
-                btnComidas.classList.remove("active");
-                mostrar(tipoActual);
-            });
-
-            btnComidas.addEventListener("click", () => {
-                tipoActual = "comida";
-                btnComidas.classList.add("active");
-                btnDesayunos.classList.remove("active");
-                mostrar(tipoActual);
-            });
-
-            setInterval(() => {
-                diaSimulado = (diaSimulado + 1) % 7;
-                mostrar(tipoActual);
-            }, 10000);
-
-            mostrar(tipoActual);
-        });
-
-        // Script para el modal de sugerencias
-        document.querySelectorAll('.star').forEach(star => {
-            star.addEventListener('click', () => {
-                const val = parseInt(star.getAttribute('data-value'));
-                document.querySelectorAll('.star').forEach(s => {
-                    s.classList.remove('text-warning');
-                    s.classList.add('text-secondary');
-                });
-                star.classList.add('text-warning');
-                let prev = star.previousElementSibling;
-                while (prev) {
-                    prev.classList.add('text-warning');
-                    prev.classList.remove('text-secondary');
-                    prev = prev.previousElementSibling;
-                }
-                calificacion = val;
-            });
-        });
-
-        document.getElementById('enviarSugerencia').addEventListener('click', () => {
-            const texto = document.getElementById('sugerenciaTexto').value.trim();
-            if (!texto || calificacion === 0) {
-                Swal.fire('Completa los campos', 'Escribe tu sugerencia y califica.', 'warning');
-                return;
-            }
-
-            const modal = bootstrap.Modal.getInstance(document.getElementById('sugerenciaModal'));
-            modal.hide();
-
-            setTimeout(() => {
-                Swal.fire({
-                    icon: 'success',
-                    title: '¡Gracias!',
-                    html: `<p>Tu sugerencia ha sido enviada.</p>
-                           <p><strong>Sugerencia:</strong> ${texto}</p>
-                           <p><strong>Calificación:</strong> ${calificacion} estrella(s)</p>`,
-                    confirmButtonColor: '#2266ff'
-                });
-                document.getElementById('sugerenciaTexto').value = '';
-                calificacion = 0;
-                document.querySelectorAll('.star').forEach(s => s.classList.remove('text-warning'));
-                document.querySelectorAll('.star').forEach(s => s.classList.add('text-secondary'));
-            }, 300);
-        });
-    </script>
-
+    <script src="js/principal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
