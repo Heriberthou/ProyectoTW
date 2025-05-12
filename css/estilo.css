@@ -1,124 +1,131 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-  }
-  
-  .header {
-    background: #fff;
-    border-bottom: 2px solid #004B7F;
-    padding: 10px 0;
-  }
-  
-  .header-content {
-    max-width: 600px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-  }
-  
-  .logo {
-    font-size: 1.2rem;
-    color: #004B7F;
-    font-weight: bold;
-  }
-  
-  .icon {
-    font-size: 1.5rem;
-  }
-  
-  main {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px 15px;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .tab {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    padding: 5px 10px;
-    background: white;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .tab.active {
-    background: #004B7F;
-    color: white;
-    border-color: #004B7F;
-  }
-  
-  .table {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .table-row {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .header-row {
-    font-weight: 600;
-    background: #f5f5f5;
-  }
-  
-  .col {
-    flex: 1;
-    font-size: 0.9rem;
-  }
-  
-  .checkbox-col {
-    width: 30px;
-  }
-  
-  .status {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-  }
-  
-  .status.completado {
-    background: #004B7F;
-  }
-  
-  .status.procesando {
-    background: #9EC954;
-  }
-  
-  .status.cancelado {
-    background: #C7CBC2;
-    color: #333;
-  }
-  
-  .status.espera {
-    background: #ECD65B;
-    color: #333;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 2px solid #004B7F;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  color: #004B7F;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+}
+
+.main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #004B7F;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.producto-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.producto-info {
+  flex-grow: 1;
+}
+
+.nombre {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.acciones a {
+  font-size: 0.8rem;
+  margin-right: 10px;
+  color: #004B7F;
+  text-decoration: none;
+}
+
+select {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+.resumen {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.resumen p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.resumen .total {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.boton-compra {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #004B7F;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.boton-compra:hover {
+  background-color: #003861;
+}
+
+
 /* CSS para pedidos: Abril */
 
   body {
