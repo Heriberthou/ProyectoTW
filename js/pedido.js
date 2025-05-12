@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Función principal para calcular total en base a cantidad y precio
-    function actualizarResumen() {
-      const precioUnitario = parseFloat($('.precio').data('precio')) || 0;
-      const cantidad = parseInt($('#cantidad').val()) || 1;
-  
-      $('#subtotal').text(`$${subtotal.toFixed(2)}`);
-      $('#total').text(`$${subtotal.toFixed(2)}`);
-      $('#totalUnidades').text(cantidad);
-    }
+function actualizarResumen() {
+  const precioUnitario = parseFloat($('.precio').data('precio')) || 0;
+  const cantidad = parseInt($('#cantidad').val()) || 1;
+  const subtotal = precioUnitario;
+
+  $('#subtotal').text(`$${subtotal.toFixed(2)}`);
+  $('#total').text(`$${subtotal.toFixed(2)}`);
+  $('#totalUnidades').text(cantidad);
+}
+
   
     // Ejecutar al cargar
     actualizarResumen();
