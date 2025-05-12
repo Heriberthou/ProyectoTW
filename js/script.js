@@ -6,29 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalUnidades = document.getElementById("totalUnidades");
 
   function actualizarResumen() {
+    if (!subtotalSpan || !totalSpan || !totalUnidades) return;
+
     let subtotal = 0;
     let totalProductos = 0;
 
-    precios.forEach((precio, index) => {
-      const precioUnitario = parseFloat(precio.dataset.precio);
-      const cantidadInput = document.getElementById("cantidad");
-      const cantidad = cantidadInput ? parseInt(cantidadInput.value) : 1;
-      subtotal += precioUnitario * cantidad;
+    cantidades.forEach((select, index) => {
+      const cantidad = parseInt(select.value);
+      const precioUnitario = parseFloat(precios[index].dataset.precio);
+      subtotal += cantidad * precioUnitario;
       totalProductos += cantidad;
     });
 
     subtotalSpan.textContent = `$${subtotal.toFixed(2)}`;
     totalSpan.textContent = `$${subtotal.toFixed(2)}`;
-    if (totalUnidades) {
-      totalUnidades.textContent = totalProductos;
-    }
+    totalUnidades.textContent = totalProductos;
   }
 
-  actualizarResumen();
+  cantidades.forEach(select => {
+    select.addEventListener("change", actualizarResumen);
+  });
 
-  const cantidadInput = document.getElementById("cantidad");
-  if (cantidadInput) {
-    cantidadInput.addEventListener("change", actualizarResumen);
-  }
+  actualizarResumen(); // cálculo inicial
 });
-
