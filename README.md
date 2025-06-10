@@ -98,4 +98,4 @@ abrilazeneth.quintasrojas@aulavirtual.umar.mx
 
 
 
-<a href="https://github.com/Heriberthou/ProyectoTW.git">Sistema Web para La Café – Universidad del Mar</a> © 2025 by <a href="https://creativecommons.org">Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth tiene licencia CC BY-NC-SA 4.0
