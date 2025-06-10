@@ -82,20 +82,45 @@ LOPEZ CRUZ NELIDA
 
 QUINTAS ROJAS ABRIL AZENETH
 
-Universidad: Universidad del Mar
+**Universidad: Universidad del Mar**
 
 Contactos:
 
-ivanalexander.cortesperez@aulavirual.umar.mx
+ivanalexander.cortesperez@aulavirtual.umar.mx
 
-alondra.galvangerman@aulavirual.umar.mx
+alondra.galvangerman@aulavirtual.umar.mx
 
-heriberto.gomezbolaina@aulavirual.umar.mx
+heriberto.gomezbolaina@aulavirtual.umar.mx
 
-nelida.lopezcruz@aulavirual.umar.mx
+nelida.lopezcruz@aulavirtual.umar.mx
 
-abrilazeneth.quintasrojas@aulavirual.umar.mx
+[AbrilAz](https://github.com/AbrilAz)
 
 
-📄 Licencia
-Este proyecto es de uso educativo y puede ser adaptado para otros contextos escolares o universitarios.
+Opcion 1
+
+Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth tiene licencia CC BY-NC-SA 4.0
+
+opcion 2
+
+<footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
+  <p>
+    <a href="https://github.com/Heriberthou/ProyectoTW.git" target="_blank">
+      Sistema Web para La Café – Universidad del Mar
+    </a> © 2025 por 
+    <a href="https://creativecommons.org" target="_blank">
+      Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto, Lopez Cruz Nelida y Quintas Rojas Abril Azeneth
+    </a> está licenciado bajo 
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    </a>
+    <span style="display: inline-flex; align-items: center; gap: .2em; margin-left: .5em;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+    </span>
+  </p>
+</footer>
+
+
