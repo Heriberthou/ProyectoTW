@@ -1,418 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Menú Cafetería</title>
-    
-    <!-- CDN de Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts para usar una tipografía más bonita -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Menú Cafetería</title>
 
-    <!-- Estilos CSS directamente en el HTML -->
-    <style>
-        /* Para evitar desplazamiento horizontal */
-        body {
-            overflow-x: hidden;
-        }
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        /* Estilos para el Header con fondo blanco */
-        .uni-header {
-            background-color: white; /* Fondo blanco */
-            padding: 20px 0; /* Espaciado superior e inferior */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo */
-            display: flex;
-            justify-content: space-between; /* Para distribuir los elementos en línea */
-            align-items: center; /* Centra los elementos verticalmente */
-            flex-wrap: wrap; /* Asegura que el contenido se ajuste en pantallas pequeñas */
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
-        .uni-header .logo {
-            max-height: 70px; /* Ajustar tamaño del logo */
-            width: auto; /* Asegura que el logo no distorsione */
-        }
+  <!-- Estilos personalizados -->
+  <style>
+    body { overflow-x: hidden; }
 
-        .uni-header .middle-img {
-            max-height: 60px; /* Ajustar tamaño de la imagen central */
-            width: auto; /* Asegura que la imagen central no distorsione */
-        }
+    .uni-header {
+      background-color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .uni-header .right-img {
-            max-height: 60px; /* Ajustar tamaño de la imagen en la esquina derecha */
-            width: auto; /* Asegura que la imagen derecha no distorsione */
-        }
+    .uni-header .logo,
+    .uni-header .middle-img,
+    .uni-header .right-img {
+      max-height: 70px;
+      width: auto;
+    }
 
-        /* Hero header con imagen de fondo sin texto encima */
-        .hero-header {
-            background-image: url('imagenes/fondo.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 50vh; /* Mantener altura para pantallas grandes */
-        }
+    .hero-header {
+      background-image: url('imagenes/fondo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 50vh;
+    }
 
-        /* Estilos para el mensaje de bienvenida debajo de la imagen */
-        .bienvenida {
-            background-color: #fff;
-            text-align: center;
-            padding: 40px 0;
-            color: #333;
-        }
+    .bienvenida {
+      background-color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      color: #333;
+    }
 
-        .bienvenida h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            color: #05203d;
-            font-weight: 600;
-        }
+    .bienvenida h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      color: #05203d;
+      font-weight: 600;
+    }
 
-        /* Estilos para los botones */
-        .bienvenida .btn {
-            background-color: #041e4e; /* Fondo azul */
-            color: white;
-            padding: 12px 30px;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
-            margin: 10px 0;
-            display: block;
-            width: 100%;
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .bienvenida .btn {
+      background-color: #041e4e;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      margin: 10px 0;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .bienvenida .btn:hover {
-            background-color: #216288; /* Cambio a un azul más claro en hover */
-        }
+    .bienvenida .btn:hover {
+      background-color: #216288;
+    }
 
-        /* Estilos para el texto que invita a registrarse */
-        .bienvenida .texto-registro {
-            font-size: 1rem;
-            color: #555;
-            margin-top: 20px;
-        }
+    .bienvenida .texto-registro {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 20px;
+    }
 
-        /* Estilos para la sección de introducción al registro */
-        .registro-intro {
-            background-color: #f1f8ff;
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
+    .registro-intro {
+      background-color: #f1f8ff;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
 
-        .registro-intro h3 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            color: #05203d;
-            text-align: center;
-        }
+    .registro-intro h3 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #05203d;
+      text-align: center;
+    }
 
-        .registro-intro p {
-            font-size: 1.2rem;
-            color: #555;
-            text-align: center;
-        }
+    .registro-intro p {
+      font-size: 1.2rem;
+      color: #555;
+      text-align: center;
+    }
 
-        .registro-intro ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
+    footer {
+      background-color: #041e4e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        .registro-intro ul li {
-            font-size: 1.1rem;
-            color: #555;
-            margin: 10px 0;
-        }
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
 
-        .registro-intro .row {
-            margin-top: 30px;
-        }
+    footer .social-icons {
+      margin-top: 10px;
+    }
 
-        .registro-intro .col-md-3 {
-            padding: 15px;
-        }
+    footer .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      text-decoration: none;
+    }
 
-        .registro-intro .col-md-3 img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
+    footer .social-icons a:hover {
+      color: #216288;
+    }
 
-        .registro-intro .btn-primary {
-            font-size: 1.1rem;
-            padding: 12px 30px;
-            border-radius: 30px;
-            background-color: #041e4e; /* Azul de la universidad */
-            color: white;
-            text-transform: uppercase;
-            margin-top: 20px;
-        }
+    @media screen and (max-width: 768px) {
+      .hero-header {
+        height: 35vh;
+      }
 
-        /* Formulario de registro oculto por defecto */
-        .form-container {
-            display: none;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 50px auto;
-            transition: all 0.3s ease-in-out;
-        }
+      .bienvenida h2 {
+        font-size: 2rem;
+      }
 
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+      .bienvenida .btn {
+        font-size: 1.1em;
+        padding: 12px 25px;
+      }
 
-        .form-container .form-group {
-            margin-bottom: 15px;
-        }
+      .registro-intro h3 {
+        font-size: 2rem;
+      }
+    }
 
-        .form-container .btn-cancel {
-            background-color: #459fe3; /* Color rojo para el botón de cancelar */
-            color: white;
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-            text-transform: uppercase;
-            width: 100%; /* Asegura que ambos botones tengan el mismo tamaño */
-            max-width: 250px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
+    @media screen and (max-width: 480px) {
+      .hero-header {
+        height: 30vh;
+      }
 
-        .form-container .btn-primary {
-            background-color: #041e4e; /* Color azul de la universidad para registrar */
-            color: white;
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-            text-transform: uppercase;
-            width: 100%; /* Asegura que ambos botones tengan el mismo tamaño */
-            max-width: 250px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
+      .bienvenida h2 {
+        font-size: 1.5rem;
+      }
 
-        .d-flex {
-            display: flex;
-            justify-content: space-between; /* Alinea los botones a los extremos */
-        }
+      .bienvenida .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
 
-        .d-flex .btn {
-            width: 48%; /* Hace que cada botón ocupe el 48% del espacio disponible */
-        }
-
-        .form-container .btn-cancel:hover {
-            background-color: #9ad1f2; /* Cambio de color cuando pasa el mouse */
-        }
-
-        .form-container .btn-primary:hover {
-            background-color: #216288; /* Cambio de color cuando pasa el mouse */
-        }
-
-        /* Footer */
-        footer {
-            background-color: #041e4e;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        footer .social-icons {
-            margin-top: 10px;
-        }
-
-        footer .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer .social-icons a:hover {
-            color: #216288;
-        }
-
-        @media screen and (max-width: 768px) {
-            .hero-header {
-                height: 35vh; /* Reducir altura para pantallas más pequeñas */
-            }
-            
-            .bienvenida h2 {
-                font-size: 2rem; /* Reducir tamaño de texto en pantallas pequeñas */
-            }
-
-            .bienvenida .btn {
-                font-size: 1.1em;
-                padding: 12px 25px;
-            }
-
-            .registro-intro h3 {
-                font-size: 2rem;
-            }
-
-            .registro-intro .btn {
-                font-size: 1.1rem;
-            }
-
-            .form-container {
-                width: 90%;
-                max-width: 400px;
-            }
-
-            .form-container h2 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-header {
-                height: 30vh; /* Reducir más la altura en pantallas muy pequeñas */
-            }
-
-            .bienvenida h2 {
-                font-size: 1.5rem;
-            }
-
-            .bienvenida .btn {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
-
-            .registro-intro h3 {
-                font-size: 1.5rem;
-            }
-
-            .registro-intro .btn {
-                font-size: 1em;
-            }
-        }
-    </style>
+      .registro-intro h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header con fondo blanco para el logo de la universidad, una imagen central y otra en la esquina derecha -->
-    <header class="uni-header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!-- Logo de la universidad (esquina izquierda) -->
-            <img src="imagenes/logoUMAR.png" alt="Logo Universidad" class="logo">
-            
-            <!-- Imagen en el centro -->
-            <img src="imagenes/logo2.png" alt="Imagen Central" class="middle-img">
-            
-            <!-- Imagen en la esquina derecha -->
-            <img src="imagenes/logo3.png" alt="Imagen Derecha" class="right-img">
-        </div>
-    </header>
-
-    <!-- Hero Header (imagen sin texto encima) -->
-    <header class="hero-header">
-        <!-- Solo la imagen de fondo -->
-    </header>
-    
-    <!-- Mensaje de bienvenida debajo de la imagen -->
-    <section class="bienvenida">
-        <div class="container">
-            <h2>¡Bienvenidos a LA CAFE!</h2> <!-- Mensaje de bienvenida -->
-            <a href="login.html" class="btn btn-success">Iniciar sesión</a> <!-- Botón para iniciar sesión -->
-            <p class="texto-registro">¿No tienes una cuenta? <a href="javascript:void(0);" id="showRegisterForm" class="btn btn-link">Regístrate aquí</a>.</p> <!-- Texto para los usuarios sin cuenta -->
-        </div>
-    </section>
-
-    <!-- Sección de introducción sobre el registro -->
-    <section class="registro-intro">
-        <div class="container">
-            <h3>¡Únete a nuestra comunidad y disfruta de beneficios exclusivos!</h3>
-            <p>Crear una cuenta en nuestra cafetería es rápido, fácil y totalmente gratis.</p>
-        </div>
-    </section>
-
-    <!-- Formulario de registro (inicialmente oculto) -->
-    <div class="form-container" id="registerForm">
-        <h2>Formulario de Registro</h2>
-        <form action="procesar_registro.php" method="POST">
-            <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
-            </div>
-            
-            <!-- Fila con los botones de registrar y cancelar -->
-            <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary">Registrar</button>
-                <button type="button" id="cancelButton" class="btn btn-cancel">Cancelar</button>
-            </div>
-        </form>
+  <!-- Encabezado con logos -->
+  <header class="uni-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="imagenes/logoUMAR.png" alt="Logo Universidad" class="logo">
+      <img src="imagenes/logo2.png" alt="Imagen Central" class="middle-img">
+      <img src="imagenes/logo3.png" alt="Imagen Derecha" class="right-img">
     </div>
+  </header>
 
+  <!-- Imagen de fondo -->
+  <header class="hero-header"></header>
 
-    <script>
-        // Mostrar formulario si URL contiene ?registro=1
-        window.addEventListener('DOMContentLoaded', function () {
-            const params = new URLSearchParams(window.location.search);
-            if (params.get('registro') === '1') {
-                document.getElementById('registerForm').style.display = 'block';
-                document.querySelector('.bienvenida').style.display = 'none';
-                document.querySelector('.registro-intro').style.display = 'none';
-            }
-        });
-    </script>
-    
+  <!-- Bienvenida -->
+  <section class="bienvenida">
+    <div class="container">
+      <h2>¡Bienvenidos a LA CAFE!</h2>
+      <a href="login.html" class="btn btn-success">Iniciar sesión</a>
+      <p class="texto-registro">
+        ¿No tienes una cuenta? <a href="registro.html" class="btn btn-link">Regístrate aquí</a>.
+      </p>
+    </div>
+  </section>
 
-    <!-- Footer con información adicional -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 LA CAFE | Todos los derechos reservados.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+  <!-- Intro de registro -->
+  <section class="registro-intro">
+    <div class="container">
+      <h3>¡Únete a nuestra comunidad y disfruta de beneficios exclusivos!</h3>
+      <p>Crear una cuenta en nuestra cafetería es rápido, fácil y totalmente gratis.</p>
+    </div>
+  </section>
 
-    <!-- Enlace al archivo JS de Bootstrap local -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 LA CAFE | Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Iconos FontAwesome para redes sociales -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-    <!-- Script para mostrar el formulario de registro y cancelar -->
-    <script>
-        document.getElementById('showRegisterForm').addEventListener('click', function() {
-            document.getElementById('registerForm').style.display = 'block';  // Mostrar el formulario de registro
-            document.querySelector('.bienvenida').style.display = 'none'; // Ocultar la bienvenida
-            document.querySelector('.registro-intro').style.display = 'none'; // Ocultar la introducción
-        });
-
-        document.getElementById('cancelButton').addEventListener('click', function() {
-            document.getElementById('registerForm').style.display = 'none';  // Ocultar el formulario de registro
-            document.querySelector('.bienvenida').style.display = 'block'; // Mostrar la bienvenida
-            document.querySelector('.registro-intro').style.display = 'block'; // Mostrar la introducción
-        });
-    </script>
+  <!-- JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>
