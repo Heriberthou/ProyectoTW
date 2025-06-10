@@ -99,3 +99,22 @@ nelida.lopezcruz@aulavirtual.umar.mx
 
 
 Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth tiene licencia CC BY-NC-SA 4.0
+
+<footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
+  <p>
+    <a href="https://github.com/Heriberthou/ProyectoTW.git" target="_blank">
+      Sistema Web para La Café – Universidad del Mar
+    </a> © 2025 por 
+    <a href="https://creativecommons.org" target="_blank">
+      Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto, Lopez Cruz Nelida y Quintas Rojas Abril Azeneth
+    </a> está licenciado bajo 
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+      Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    </a>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
+  </p>
+</footer>
+
