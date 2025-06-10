@@ -97,8 +97,11 @@ nelida.lopezcruz@aulavirtual.umar.mx
 [AbrilAz](https://github.com/AbrilAz)
 
 
+Opcion 1
 
 Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth tiene licencia CC BY-NC-SA 4.0
+
+opcion 2
 
 <footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
   <p>
