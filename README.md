@@ -86,15 +86,16 @@ Universidad: Universidad del Mar
 
 Contactos:
 
-ivanalexander.cortesperez@aulavirual.umar.mx
+ivanalexander.cortesperez@aulavirtual.umar.mx
 
-alondra.galvangerman@aulavirual.umar.mx
+alondra.galvangerman@aulavirtual.umar.mx
 
-heriberto.gomezbolaina@aulavirual.umar.mx
+heriberto.gomezbolaina@aulavirtual.umar.mx
 
-nelida.lopezcruz@aulavirual.umar.mx
+nelida.lopezcruz@aulavirtual.umar.mx
 
-abrilazeneth.quintasrojas@aulavirual.umar.mx
+abrilazeneth.quintasrojas@aulavirtual.umar.mx
 
 
-<a href="https://github.com/Heriberthou/ProyectoTW.git"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sistema Web para La Café – Universidad del Mar</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> © 2025 por </font></font><a href="https://creativecommons.org"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> tiene licencia </font></font><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CC BY-NC-SA 4.0</font></font></a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+
+<a href="https://github.com/Heriberthou/ProyectoTW.git">Sistema Web para La Café – Universidad del Mar</a> © 2025 by <a href="https://creativecommons.org">Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
