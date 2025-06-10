@@ -1,226 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Iniciar Sesión - LA CAFE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión - LA CAFÉ</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fuente Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <style>
-        /* Estilos del formulario y diseño (sin cambios) */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        header {
-            background-color: white;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    header {
+      padding: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      color: #000;
+    }
 
-        header img {
-            max-height: 120px;
-        }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
 
-        .login-container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .login-form {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
-        .login-container h2 {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            color: #05203d;
-            margin-bottom: 30px;
-        }
+    .form-header {
+      text-align: center;
+      margin-top: 20px;
+      flex-shrink: 0;
+    }
 
-        .btn-primary {
-            background-color: #041e4e;
-            color: white;
-            border-radius: 30px;
-            padding: 12px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
+    .form-header h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-        .btn-primary:hover {
-            background-color: #216288;
-        }
+    .form-header p {
+      color: #666;
+      margin-top: 8px;
+    }
 
-        .btn-secondary {
-            background-color: #6c757d;
-            color: white;
-            border-radius: 30px;
-            padding: 12px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
+    .form-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 80px;
+      gap: 20px;
+    }
 
-        .btn-secondary:hover {
-            background-color: #495057;
-        }
+    .form-group {
+      margin-bottom: 0;
+    }
 
-        /* Estilo cuando se hace clic en "Cancelar" */
-        .btn-cancel-clicked {
-            background-color: #357ddc !important;
-            border-color: #357ddc !important;
-            color: white !important;
-        }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
 
-        .btn-link {
-            text-align: center;
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #041e4e;
-        }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: #083b66;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
 
-        .btn-link:hover {
-            text-decoration: underline;
-        }
+    .input-wrapper input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      font-size: 16px;
+    }
 
-        footer {
-            background-color: #041e4e;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    .input-wrapper button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
 
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-            .login-container {
-                padding: 30px;
-                margin: 30px 20px;
-            }
+    .btn-login {
+      width: 100%;
+      padding: 14px;
+      background-color: #0c4e84;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 40px;
+    }
 
-            .btn-primary, .btn-secondary {
-                font-size: 1rem;
-                padding: 10px;
-            }
-        }
-    </style>
+    .btn-login:hover {
+      background-color: #083b66;
+    }
+
+    .text-link {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+      display: block;
+      margin-top: 12px;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .alert {
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <img src="imagenes/logo.png" alt="Logo LA CAFE" class="img-fluid" />
-    </header>
+  <header onclick="window.location.href='inicio.html'">
+    ← Iniciar Sesión
+  </header>
 
-    <!-- Main content (Formulario) -->
-    <main>
-        <div class="login-container">
-            <h2>Iniciar Sesión</h2>
-            <form id="loginForm">
-                <div class="form-group mb-3">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group mb-4">
-                    <label for="password">Contraseña</label>
-                    <div class="input-group">
-                        <input type="password" class="form-control" id="password" name="password" required>
-                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                            👁️
-                        </button>
-                    </div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                    <button type="button" class="btn btn-secondary" id="cancelarBtn">Cancelar</button>
-                </div>
-            </form>
-            <a href="inicio.html?registro=1" class="btn-link">¿No tienes cuenta? Regístrate aquí</a>
-            <!-- Error Message -->
-            <div id="error-message" class="alert alert-danger mt-3 d-none" role="alert">
-                Usuario o contraseña incorrectos.
-            </div>
-            <!-- Success Message -->
-            <div id="success-message" class="alert alert-success mt-3 d-none" role="alert">
-                ¡Bienvenido! Has iniciado sesión correctamente.
-            </div>
+  <main>
+    <form class="login-form" id="loginForm">
+      <div class="form-header">
+        <h2>Bienvenido a La Café</h2>
+        <p>Por favor, inicia sesión <br> para continuar con tu pedido.</p>
+      </div>
+
+      <div class="form-body">
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <div class="input-wrapper">
+            <input type="email" id="email" placeholder="ejemplo@umar.mx" required />
+          </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 LA CAFE | Todos los derechos reservados.</p>
-    </footer>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <div class="input-wrapper">
+            <input type="password" id="password" placeholder="Ingresa tu contraseña" required />
+            <button type="button" id="togglePassword">
+              <i class="bi bi-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+        </div>
 
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+        <button type="submit" class="btn-login">Iniciar Sesión</button>
 
-    <!-- Script para validación -->
-    <script>
-        const validUser = "usuario@prueba.com";
-        const validPassword = "contraseña123";
+        <a href="#" class="text-link">¿Olvidaste tu contraseña?</a>
+        <a href="inicio.html?registro=1" class="text-link">¿No tienes cuenta? Regístrate aquí.</a>
 
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
+        <div id="error-message" class="alert alert-danger">Usuario o contraseña incorrectos.</div>
+        <div id="success-message" class="alert alert-success">¡Bienvenido! Has iniciado sesión correctamente.</div>
+      </div>
+    </form>
+  </main>
 
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
+  <script>
+    const validUser = "usuario@prueba.com";
+    const validPassword = "contraseña123";
 
-            const errorMessage = document.getElementById("error-message");
-            const successMessage = document.getElementById("success-message");
+    const loginForm = document.getElementById("loginForm");
+    const errorMessage = document.getElementById("error-message");
+    const successMessage = document.getElementById("success-message");
 
-            // Limpiar mensajes
-            errorMessage.classList.add("d-none");
-            successMessage.classList.add("d-none");
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-            // Comprobar si las credenciales son correctas
-            if (email === validUser && password === validPassword) {
-                window.location.href = "index.html";
+      errorMessage.style.display = "none";
+      successMessage.style.display = "none";
 
-            } else {
-                errorMessage.classList.remove("d-none");
-            }
-        });
+      if (email === validUser && password === validPassword) {
+        successMessage.style.display = "block";
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1000);
+      } else {
+        errorMessage.style.display = "block";
+      }
+    });
 
-        // Acción de cancelar
-        document.getElementById("cancelarBtn").addEventListener("click", function () {
-            this.classList.add("btn-cancel-clicked");
-            setTimeout(() => {
-                window.location.href = "inicio.html";
-            }, 300); // Redirige después de 300 ms
-        });
+    document.getElementById("togglePassword").addEventListener("click", function () {
+      const passwordField = document.getElementById("password");
+      const eyeIcon = document.getElementById("eyeIcon");
 
-        // Mostrar/ocultar contraseña
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            const passwordField = document.getElementById("password");
-            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
-            passwordField.setAttribute("type", type);
+      const isPassword = passwordField.type === "password";
+      passwordField.type = isPassword ? "text" : "password";
 
-            // Cambiar el ícono del botón (opcional: puedes usar un ícono más sofisticado)
-            this.textContent = type === "password" ? "👁️" : "🙈";
-        });
-
-    </script>
-
+      eyeIcon.classList.toggle("bi-eye");
+      eyeIcon.classList.toggle("bi-eye-slash");
+    });
+  </script>
 </body>
 </html>
