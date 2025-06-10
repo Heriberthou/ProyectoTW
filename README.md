@@ -94,7 +94,7 @@ heriberto.gomezbolaina@aulavirtual.umar.mx
 
 nelida.lopezcruz@aulavirtual.umar.mx
 
-abrilazeneth.quintasrojas@aulavirtual.umar.mx
+[abrilazenethquintasrojas](https://github.com/AbrilAz)
 
 
 
