@@ -111,10 +111,13 @@ Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan 
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
       Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
     </a>
-    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
-    <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em; max-height: 1em; vertical-align: middle; margin-left: .2em;">
+    <span style="display: inline-flex; align-items: center; gap: .2em; margin-left: .5em;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="width: 1em; height: 1em; vertical-align: middle;">
+    </span>
   </p>
 </footer>
+
 
