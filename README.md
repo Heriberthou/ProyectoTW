@@ -82,7 +82,7 @@ LOPEZ CRUZ NELIDA
 
 QUINTAS ROJAS ABRIL AZENETH
 
-Universidad: Universidad del Mar
+**Universidad: Universidad del Mar**
 
 Contactos:
 
