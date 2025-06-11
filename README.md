@@ -77,7 +77,7 @@ Explora las funcionalidades:
 
  <a ### Inicio/Bienvenida                       ### Menu principal                           ### Historial de pedidos /a>
 <p align="center">
-  <img src="imagenes/muestraCapturaPantalla.png" alt="Menú" width="30%"/>
+  <img src="imagenes/inicio.png" alt="Menú" width="30%"/>
   <img src="imagenes/principal.png" alt="Pedido" width="30%"/>
   <img src="imagenes/historial.png" alt="Sugerencia" width="30%"/>
 </p>
