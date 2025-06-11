@@ -46,8 +46,11 @@
   <div class="container-box">
     <!-- Paso 1: Ingresar correo -->
     <div class="step active" id="step1">
+      <div class="mb-3">
+        <button onclick="goBack()" class="btn btn-link p-0 text-decoration-none text-dark fw-bold">←</button>
+      </div>
       <h4 class="text-center mb-3">¿Olvidaste tu contraseña?</h4>
-        <p class="text-center text-muted mb-4">
+      <p class="text-center text-muted mb-4">
         Por favor, introduce tu correo electrónico para<br>
         restablecer la contraseña.
       </p>
@@ -62,10 +65,13 @@
 
     <!-- Paso 2: Ingresar código -->
     <div class="step" id="step2">
+      <div class="mb-3">
+        <button onclick="goBack()" class="btn btn-link p-0 text-decoration-none text-dark fw-bold">←</button>
+      </div>
       <h4 class="text-center mb-3">Revisa tu correo</h4>
-        <p class="text-center text-muted mb-4">
-          Enviamos un enlace de restablecimiento a ejem..@umar.
-          Ingresa el código de 5 dígitos mencionado en el correo
+      <p class="text-center text-muted mb-4">
+        Enviamos un enlace de restablecimiento a ejem..@umar.<br>
+        Ingresa el código de 5 dígitos mencionado en el correo.
       </p>
       <form onsubmit="event.preventDefault(); nextStep(3);">
         <div class="code-box mb-4">
@@ -76,27 +82,29 @@
           <input type="text" maxlength="1" class="form-control" required />
         </div>
         <button type="submit" class="btn btn-primary w-100">Verificar código</button>
-          <p class="text-center mt-2 text-muted">
-      ¿Aún no recibes el correo? <a href="#" class="text-primary fw-semibold">Reenviar correo</a>
-    </p>
+        <p class="text-center mt-2 text-muted">
+          ¿Aún no recibes el correo? <a href="#" class="text-primary fw-semibold">Reenviar correo</a>
+        </p>
       </form>
     </div>
 
     <!-- Paso 3: Nueva contraseña -->
     <div class="step" id="step3">
+      <div class="mb-3">
+        <button onclick="goBack()" class="btn btn-link p-0 text-decoration-none text-dark fw-bold">←</button>
+      </div>
       <h4 class="text-center mb-3">Crea una nueva contraseña</h4>
-         <p class="text-center text-muted mb-4">
-          Crea una nueva contraseña. 
-          Asegúrate de que sea diferente a las anteriores por seguridad
+      <p class="text-center text-muted mb-4">
+        Crea una nueva contraseña. Asegúrate de que sea diferente a las anteriores por seguridad.
       </p>
-      <form onsubmit="event.preventDefault(); nextStep(4);">
+      <form onsubmit="event.preventDefault(); validarContrasenas();">
         <div class="mb-3">
           <label>Nueva contraseña</label>
-      <input type="password" class="form-control" placeholder="Ingresa tu nueva contraseña" required />
+          <input type="password" id="pass1" class="form-control" placeholder="Ingresa tu nueva contraseña" required />
         </div>
         <div class="mb-3">
           <label>Confirmar contraseña</label>
-      <input type="password" class="form-control" placeholder="Reingresa la contraseña" required />
+          <input type="password" id="pass2" class="form-control" placeholder="Reingresa la contraseña" required />
         </div>
         <button type="submit" class="btn btn-primary w-100">Actualizar contraseña</button>
       </form>
@@ -107,14 +115,36 @@
       <div class="success-check mb-3">✅</div>
       <h5>¡Listo!</h5>
       <p>Tu contraseña ha sido actualizada con éxito.</p>
-      <a href="inicio.html" class="btn btn-primary w-100 mt-3">Iniciar sesión</a>
+      <a href="login.html" class="btn btn-primary w-100 mt-3">Iniciar sesión</a>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script>
     function nextStep(stepNumber) {
       document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
       document.getElementById(`step${stepNumber}`).classList.add('active');
+    }
+
+    function goBack() {
+      const steps = Array.from(document.querySelectorAll('.step'));
+      const currentIndex = steps.findIndex(step => step.classList.contains('active'));
+      if (currentIndex > 0) {
+        steps[currentIndex].classList.remove('active');
+        steps[currentIndex - 1].classList.add('active');
+      }
+    }
+
+    function validarContrasenas() {
+      const pass1 = document.getElementById('pass1').value;
+      const pass2 = document.getElementById('pass2').value;
+
+      if (pass1 !== pass2) {
+        alert("Las contraseñas no coinciden. Intenta nuevamente.");
+        return;
+      }
+
+      nextStep(4);
     }
   </script>
 
