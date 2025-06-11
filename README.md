@@ -180,13 +180,17 @@ Abre el archivo index.html en tu navegador web.
 
 
 
-Contactos:
+👥 Autores:
 
-[Cortes Perez Ivan Alexander](ivanalexander.cortesperez@aulavirtual.umar.mx)
-[Galvan German Alondra](alondra.galvangerman@aulavirtual.umar.mx) 
-[Gomez Bolaina Heriberto](heriberto.gomezbolaina@aulavirtual.umar.mx)
-[Lopez Cruz Nelida](nelida.lopezcruz@aulavirtual.umar.mx) 
-[Quintas Rojas Abril Azeneth](https://github.com/AbrilAz)
+**Gomez Bolaina Heriberto - Desarrolador y Lider del proyecto**  [contacto](heriberto.gomezbolaina@aulavirtual.umar.mx)
+
+**Cortes Perez Ivan Alexander -Desarrollador** [Contacto](ivanalexander.cortesperez@aulavirtual.umar.mx)
+
+**Galvan German Alondra - Desarrollador** [contacto](alondra.galvangerman@aulavirtual.umar.mx) 
+
+**Lopez Cruz Nelida - Desarrollador**  [contacto(nelida.lopezcruz@aulavirtual.umar.mx) 
+
+**Quintas Rojas Abril Azeneth - Desarrollador** [contacto](https://github.com/AbrilAz)
 
 
 
