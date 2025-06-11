@@ -73,8 +73,16 @@ Explora las funcionalidades:
 
 🗣️ Enviar sugerencias y calificaciones
 
-📸 Capturas de pantalla
-![Menú](images/captura-menu.jpg)
+## 📸 Capturas de pantalla
+
+  ### Inicio/Bienvenida                       ### Menu principal                           ### Historial de pedidos 
+<p align="center">
+  <img src="imagenes/muestraCapturaPantalla.png" alt="Menú" width="30%"/>
+  <img src="imagenes/principal.png" alt="Pedido" width="30%"/>
+  <img src="imagenes/historial.png" alt="Sugerencia" width="30%"/>
+</p>
+
+
 
 Contactos:
 
