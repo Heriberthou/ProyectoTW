@@ -77,10 +77,11 @@ Explora las funcionalidades:
 
 
 <p align="center">
-     <tr>
-    <th>Inicio/Bienvenida</th>
-    <th>Menú principal</th>
-    <th>Historial de pedidos</th>
+   <tr>
+    <th> Inicio/Bienvenida          </th>
+    <th>                  Menú principal        </th>
+    <th>                                  Historial de pedidos  
+    </th>
   </tr>
    <tr>
   <img src="imagenes/inicio.png" alt="Menú" width="20%"/>
