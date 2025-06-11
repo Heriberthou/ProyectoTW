@@ -210,6 +210,14 @@ Abre el archivo index.html en tu navegador web.
 **Quintas Rojas Abril Azeneth - Desarrollador** [contacto](https://github.com/AbrilAz)
 
 
+## 🖼️ Créditos de imágenes
+
+Este proyecto utiliza imágenes de terceros (logos, íconos, fondos) con fines meramente ilustrativos y educativos.  
+
+Si decides implementar este sistema, se recomienda reemplazar estas imágenes por recursos propios o con licencia adecuada.
+
+> ⚠️ Las imágenes no están destinadas a uso comercial ni distribución pública sin autorización de sus autores originales.
+
 
 <footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
   <p>
