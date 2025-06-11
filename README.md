@@ -8,7 +8,7 @@ Con este sistema puedes:
 - Registrar nuevos platillos 👩‍🍳  
 - Enviar sugerencias y calificaciones ✍️
 
-> ✨ Creando soluciones para la comunidad universitaria del Mar.
+> ✨ Creando soluciones tecnologicas para la comunidad universitaria del Mar.
 
 
 ## 🎯 Objetivo
@@ -157,9 +157,12 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 
 ## ⚙️ ¿Cómo usar?
 
-1. Clona el repositorio:  
-   git clone https://github.com/tu-usuario/la-cafe.git
+1. Clona el repositorio:
+   
+   git clone https:[//github.com/La Café](https://github.com/Heriberthou/ProyectoTW.git)
+   
 Abre el archivo index.html en tu navegador web.
+
 -Abre index.html en tu navegador.
 
 -Explora las funcionalidades:
