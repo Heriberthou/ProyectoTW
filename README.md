@@ -76,13 +76,12 @@ Explora las funcionalidades:
 ## 📸 Capturas de pantalla
 
 ### 🧾 Menú interactivo  
-<img src="imagenes/MuestraCapturaPantalla.png" alt="Captura del menú" width="100"/>
+<p align="center">
+  <img src="imagenes/MuestraCapturaPantalla.png" alt="Menú" width="30%"/>
+  <img src="imagenes/torta.png" alt="Pedido" width="30%"/>
+  <img src="imagenes/umar.png" alt="Sugerencia" width="30%"/>
+</p>
 
-### 📦 Pedido personalizado  
-<img src="images/captura-pedido.jpg" alt="Formulario de pedido" width="600"/>
-
-### 💬 Sugerencias del usuario  
-<img src="images/captura-sugerencia.jpg" alt="Formulario de sugerencias" width="600"/>
 
 
 Contactos:
