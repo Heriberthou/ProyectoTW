@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historial de pedidos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f6fa;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 18px;
+      color: #004b87;
+      margin: 0;
+    }
+
+    header img {
+      width: 28px;
+      height: 28px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 16px 0 10px;
+      color: #222;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .filter-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 13px;
+      color: #004b87;
+      padding: 4px 8px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background-color: #004b87;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .pedido-card {
+      background-color: #fff;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 16px;
+    }
+
+    .pedido-card.encabezado {
+      background-color: transparent;
+      box-shadow: none;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: -4px;
+      padding-bottom: 0;
+    }
+
+    .pedido-card.encabezado .pedido-row {
+      justify-content: space-between;
+      padding: 0 16px;
+      font-size: 14px;
+      color: #666;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .pedido-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+
+    .pedido-row span {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .pedido-row span:nth-child(1) {
+      text-align: left;
+    }
+
+    .pedido-row span:nth-child(2) {
+      text-align: center;
+    }
+
+    .pedido-row span:nth-child(3) {
+      text-align: right;
+    }
+
+    .status {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .Preparando {
+      background-color: #f0ad4e;
+    }
+
+    .Procesando {
+      background-color: #5cb85c;
+    }
+
+    .En\ espera {
+      background-color: #f7c948;
+      color: #333 !important;
+    }
+
+    .Entregado {
+      background-color: #004b87;
+    }
+
+    .Cancelado {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universidad del Mar</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="perfil">
+  </header>
+
+  <h2>Historial de pedidos</h2>
+
+  <div class="filter-bar" id="filterBar"></div>
+
+  <!-- Fila de encabezado -->
+  <div class="pedido-card encabezado">
+    <div class="pedido-row">
+      <span><strong>Pedido</strong></span>
+      <span><strong>Fecha</strong></span>
+      <span><strong>Estado</strong></span>
+    </div>
+  </div>
+
+  <!-- Contenedor de pedidos -->
+  <div id="pedidoContainer"></div>
+
+  <script>
+    const pedidos = [
+      { platillo: "Pechuga a la plancha", fecha: "2025-05-05", estado: "Entregado" },
+      { platillo: "Torta", fecha: "2025-05-05", estado: "En espera" },
+      { platillo: "Ensalada", fecha: "2025-05-05", estado: "Procesando" },
+      { platillo: "Pechuga empanizada", fecha: "2025-05-05", estado: "Entregado" },
+      { platillo: "Huevos", fecha: "2025-05-05", estado: "Cancelado" },
+    ];
+
+    const estados = ["Todo", "Preparando", "Procesando", "En espera", "Entregado", "Cancelado"];
+
+    const filterBar = document.getElementById("filterBar");
+    const pedidoContainer = document.getElementById("pedidoContainer");
+
+    function contarPorEstado() {
+      const conteo = {};
+      estados.forEach(e => conteo[e] = 0);
+      pedidos.forEach(p => conteo[p.estado]++);
+      conteo["Todo"] = pedidos.length;
+      return conteo;
+    }
+
+    function renderFiltros() {
+      const conteos = contarPorEstado();
+      filterBar.innerHTML = "";
+      estados.forEach(estado => {
+        const btn = document.createElement("button");
+        btn.className = "filter-btn";
+        btn.textContent = `${estado} (${conteos[estado]})`;
+        btn.addEventListener("click", () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderPedidos(estado);
+        });
+        filterBar.appendChild(btn);
+      });
+    }
+
+    function escapeClaseCSS(estado) {
+      return estado.replace(" ", "\\ ");
+    }
+
+    function formatearFecha(fechaStr) {
+      const fecha = new Date(fechaStr);
+      return fecha.toLocaleDateString("es-ES", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+      });
+    }
+
+    function renderPedidos(filtro) {
+      pedidoContainer.innerHTML = "";
+      const lista = filtro === "Todo" ? pedidos : pedidos.filter(p => p.estado === filtro);
+      lista.forEach(p => {
+        const claseEstado = escapeClaseCSS(p.estado);
+        const card = document.createElement("div");
+        card.className = "pedido-card";
+        card.innerHTML = `
+          <div class="pedido-row">
+            <span>${p.platillo}</span>
+            <span>${formatearFecha(p.fecha)}</span>
+            <span class="status ${claseEstado}">${p.estado}</span>
+          </div>
+        `;
+        pedidoContainer.appendChild(card);
+      });
+    }
+
+    // Inicialización
+    renderFiltros();
+    renderPedidos("Todo");
+    document.querySelectorAll('.filter-btn')[0].classList.add('active');
+  </script>
+
+</body>
+</html>
