@@ -74,7 +74,7 @@ Explora las funcionalidades:
 🗣️ Enviar sugerencias y calificaciones
 
 📸 Capturas de pantalla
-![Menú](images/captura-menu.jpg)
+![Menú](images/MuestraCapturaPantalla.png)
 
 Contactos:
 
