@@ -75,11 +75,13 @@ Explora las funcionalidades:
 
 ## 📸 Capturas de pantalla
 
- <a ### Inicio/Bienvenida                       ### Menu principal                           ### Historial de pedidos /a>
+  ### Inicio/Bienvenida                      
+  ### Menu principal                          
+  ### Historial de pedidos 
 <p align="center">
-  <img src="imagenes/inicio.png" alt="Menú" width="30%"/>
-  <img src="imagenes/principal.png" alt="Pedido" width="30%"/>
-  <img src="imagenes/historial.png" alt="Sugerencia" width="30%"/>
+  <img src="imagenes/inicio.png" alt="Menú" width="50%"/>
+  <img src="imagenes/principal.png" alt="Pedido" width="50%"/>
+  <img src="imagenes/historial.png" alt="Sugerencia" width="50%"/>
 </p>
 
 
