@@ -15,14 +15,105 @@ Con este sistema puedes:
 
 Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el proceso de atención y pedidos en la cafetería universitaria, mejorando la interacción entre el usuario y el equipo de cocina.
 
+
 ## 🚀 Funcionalidades
 
-- 🔐 Registro e inicio de sesión de usuarios.
-- 📋 Visualización del menú clasificado (desayunos, comidas, bebidas).
-- 🧾 Realización de pedidos con opciones personalizadas.
-- 🗣️ Envío de sugerencias y calificación del servicio.
-- 🔄 Gestión de pedidos con estados: `Preparando`, `Entregado`, `Cancelado`.
-- 🍛 Registro de nuevos platillos con imagen, precio y descripción.
+- 🔐 Registro e inicio de sesión de usuarios
+- 📋 Visualización del menú clasificado (desayunos, comidas, bebidas)
+- 🧾 Realización de pedidos personalizados
+- 🗣️ Envío de sugerencias y calificación del servicio
+- 🔄 Gestión de pedidos con estados: `Preparando`, `Entregado`, `En espera`, `Cancelado`
+- 🛍️ Carrito de compras y confirmación de pedidos
+- 🕓 Historial de pedidos con filtros por estado
+- 🔐 Recuperación segura de contraseña
+
+
+## 🖥️ Descripción de pantallas y flujos
+
+### ✅ Inicio / Bienvenida
+- Muestra bienvenida al usuario y botones:
+  - **Iniciar sesión** → redirige al login.
+  - **Registrarse** → redirige al formulario de registro.
+
+
+### 🔐 Inicio de sesión
+- Campos: correo electrónico, contraseña.
+- Botones:
+  - **Iniciar sesión**: valida credenciales y redirige al menú principal.
+  - **¿Olvidaste tu contraseña?**: redirige a recuperación.
+  - **¿No tienes cuenta? Regístrate aquí**: va a registro.
+
+
+
+### 🔁 Restablecer contraseña
+- Flujo:
+  - Ingresar correo institucional.
+  - Recibir enlace o código de verificación.
+  - Ingresar nueva contraseña y confirmarla.
+  - Confirmar actualización y volver al login.
+
+
+### 📝 Registro de usuario
+- Campos:
+  - Nombre completo
+  - Correo institucional
+  - Contraseña / Confirmar contraseña
+- Botón: **Crear cuenta**
+- Validación de errores y redirección automática tras éxito.
+
+
+
+### 📋 Menú principal
+- Selector de tipo de comida:
+  - **[Desayunos] [Comidas]**
+- Secciones:
+  - **Menú del día**: platillos destacados con precio e “incluye”.
+  - **Explorar**: lista horizontal de snacks y bebidas.
+- Al seleccionar un platillo → se muestra una pantalla de especificación.
+
+
+### 💬 Modal de sugerencias
+- Abierto desde botón “Sugerencias”.
+- Componentes:
+  - Campo de texto
+  - Calificación (1-5 estrellas)
+  - Botón "Enviar"
+- Muestra mensaje de confirmación y cierra modal.
+
+
+### 🍽️ Especificación de platillos
+- Pantalla con detalles del platillo seleccionado.
+- Opciones de complementos.
+- Botones:
+  - **Agregar al carrito**
+  - **Confirmar pedido**
+
+
+### 💳 Confirmación de pedido
+- Campo: monto con el que pagará.
+- Muestra total, cambio estimado.
+- Botones:
+  - **Atrás**
+  - **Continuar compra**
+
+
+### 🛍️ Carrito de compras
+- Lista de productos seleccionados:
+  - Modificar cantidad
+  - Eliminar producto
+  - Guardar para después
+- Botón: **Continuar compra** → método de pago.
+- Si está vacío, muestra mensaje de carrito vacío.
+
+
+### 📦 Mi pedido / Historial de pedidos
+- Tabla con:
+  - Platillo
+  - Fecha
+  - Estado (`Entregado`, `En espera`, `Procesando`, `Cancelado`)
+- Barra de filtros por estado.
+- Contador por categoría.
+- Actualización dinámica según filtro seleccionado.
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -39,9 +130,9 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ├── index.html # Página principal
 ├── login.html # Inicio de sesión
 ├── registro.html # Registro de usuarios
-├── menu.html # Visualización del menú
-├── pedidos.html # Estado de pedidos
-├── sugerencias.html # Envío de sugerencias
+├── menu.html # Menú principal
+├── pedidos.html # Historial de pedidos
+├── sugerencias.html # Modal de sugerencias
 ├── registrar-platillo.html # Registro de platillos
 
 ├── css/
@@ -50,8 +141,8 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ├── js/
 │ └── script.js
 
-├── images/
-│ └── (logos, platillos)
+├── imagenes/
+│ 
 
 └── README.md
 
@@ -62,16 +153,14 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 1. Clona el repositorio:  
    git clone https://github.com/tu-usuario/la-cafe.git
 Abre el archivo index.html en tu navegador web.
+-Abre index.html en tu navegador.
 
-Explora las funcionalidades:
-
-📋 Ver menú del día
-
-🧾 Personalizar y enviar pedido
-
-🍛 Registrar nuevos platillos (admin)
-
-🗣️ Enviar sugerencias y calificaciones
+-Explora las funcionalidades:
+-Inicia sesión o regístrate.
+-Consulta el menú y realiza un pedido.
+-Agrega productos al carrito.
+-Envía sugerencias.
+-Visualiza tu historial de pedidos.
 
 ## 📸 Capturas de pantalla
 
@@ -90,17 +179,14 @@ Explora las funcionalidades:
 </table>
 
 
+
 Contactos:
 
-ivanalexander.cortesperez@aulavirtual.umar.mx
-
-alondra.galvangerman@aulavirtual.umar.mx
-
-heriberto.gomezbolaina@aulavirtual.umar.mx
-
-nelida.lopezcruz@aulavirtual.umar.mx
-
-[AbrilAz](https://github.com/AbrilAz)
+[Cortes Perez Ivan Alexander](ivanalexander.cortesperez@aulavirtual.umar.mx)
+[Galvan German Alondra](alondra.galvangerman@aulavirtual.umar.mx) 
+[Gomez Bolaina Heriberto](heriberto.gomezbolaina@aulavirtual.umar.mx)
+[Lopez Cruz Nelida](nelida.lopezcruz@aulavirtual.umar.mx) 
+[Quintas Rojas Abril Azeneth](https://github.com/AbrilAz)
 
 
 
