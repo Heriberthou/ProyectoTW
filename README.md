@@ -75,7 +75,7 @@ Explora las funcionalidades:
 
 ## 📸 Capturas de pantalla
 
-  ### Inicio/Bienvenida                       ### Menu principal                           ### Historial de pedidos 
+ <a ### Inicio/Bienvenida                       ### Menu principal                           ### Historial de pedidos /a>
 <p align="center">
   <img src="imagenes/muestraCapturaPantalla.png" alt="Menú" width="30%"/>
   <img src="imagenes/principal.png" alt="Pedido" width="30%"/>
