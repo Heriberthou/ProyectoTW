@@ -79,12 +79,10 @@ Explora las funcionalidades:
   ### Menu principal                          
   ### Historial de pedidos 
 <p align="center">
-  <img src="imagenes/inicio.png" alt="Menú" width="50%"/>
-  <img src="imagenes/principal.png" alt="Pedido" width="50%"/>
-  <img src="imagenes/historial.png" alt="Sugerencia" width="50%"/>
+  <img src="imagenes/inicio.png" alt="Menú" width="10%"/>
+  <img src="imagenes/principal.png" alt="Pedido" width="10%"/>
+  <img src="imagenes/historial.png" alt="Sugerencia" width="10%"/>
 </p>
-
-
 
 Contactos:
 
