@@ -143,9 +143,11 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ├── registrar-platillo.html # Registro de platillos
 
 ├── css/
+
 │ └── estilos.css
 
 ├── js/
+
 │ └── script.js
 
 ├── imagenes/
@@ -166,10 +168,15 @@ Abre el archivo index.html en tu navegador web.
 -Abre index.html en tu navegador.
 
 -Explora las funcionalidades:
+
 -Inicia sesión o regístrate.
+
 -Consulta el menú y realiza un pedido.
+
 -Agrega productos al carrito.
+
 -Envía sugerencias.
+
 -Visualiza tu historial de pedidos.
 
 ## 📸 Capturas de pantalla
