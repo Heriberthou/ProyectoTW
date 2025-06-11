@@ -74,13 +74,7 @@ Explora las funcionalidades:
 🗣️ Enviar sugerencias y calificaciones
 
 📸 Capturas de pantalla
-🧾 Menú interactivo
-
-📦 Pedido personalizado
-
-💬 Sugerencias del usuario
-
-⚠️ Asegúrate de tener estas imágenes en la carpeta /images o actualiza las rutas si están en otro lugar.
+![Menú](images/captura-menu.jpg)
 
 Contactos:
 
