@@ -1,88 +1,86 @@
-# Sistema Web para La Café - Universidad del Mar
+# ☕ Sistema Web para *La Café* - Universidad del Mar
 
-Este proyecto es una plataforma web desarrollada para **La Café** de la Universidad del Mar. 
-Permite a los usuarios **explorar el menú**, **realizar pedidos personalizados**, **registrar platillos**, y enviar **sugerencias** para mejorar el servicio. 
-Está enfocado tanto en la experiencia del **usuario final** como en la gestión operativa.
+Bienvenido/a al sistema web de **La Café**, una plataforma desarrollada para mejorar la experiencia de estudiantes, docentes y personal en la cafetería de la **Universidad del Mar**.  
+Con este sistema puedes:
 
-## Objetivo
+- Consultar el menú del día 🍽️  
+- Realizar pedidos personalizados 🧾  
+- Registrar nuevos platillos 👩‍🍳  
+- Enviar sugerencias y calificaciones ✍️
 
-Brindar una solución digital accesible y moderna para mejorar el proceso de atención y pedidos en la cafetería universitaria, con una interfaz limpia, intuitiva y funcional.
+> ✨ Una solución moderna, accesible y centrada en el usuario.
 
-## Funcionalidades
 
-- Registro e inicio de sesión de usuarios.
-- Visualización de menú (desayunos, comidas, bebidas).
-- Realización de pedidos con opciones personalizadas.
-- Envío de sugerencias y calificación del servicio.
-- Gestión de pedidos con estado: *Preparando*, *Entregado*, *Cancelado*.
-- Registro de nuevos platillos con imagen, precio y descripción.
+## 🎯 Objetivo
 
-## Tecnologías utilizadas
+Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el proceso de atención y pedidos en la cafetería universitaria, mejorando la interacción entre el usuario y el equipo de cocina.
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Bootstrap 5**
-- **jQuery**
+## 🚀 Funcionalidades
 
-##  Estructura del proyecto
+- 🔐 Registro e inicio de sesión de usuarios.
+- 📋 Visualización del menú clasificado (desayunos, comidas, bebidas).
+- 🧾 Realización de pedidos con opciones personalizadas.
+- 🗣️ Envío de sugerencias y calificación del servicio.
+- 🔄 Gestión de pedidos con estados: `Preparando`, `Entregado`, `Cancelado`.
+- 🍛 Registro de nuevos platillos con imagen, precio y descripción.
+
+## 🛠️ Tecnologías utilizadas
+
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap 5  
+- jQuery
+
+
+## 📁 Estructura del proyecto
 
 /la-cafe
-
-├── index.html # Página principal de inicio
-
+├── index.html # Página principal
 ├── login.html # Inicio de sesión
-
 ├── registro.html # Registro de usuarios
-
-├── menu.html # Menú de alimentos
-
-├── pedidos.html # Visualización de pedidos
-
+├── menu.html # Visualización del menú
+├── pedidos.html # Estado de pedidos
 ├── sugerencias.html # Envío de sugerencias
-
 ├── registrar-platillo.html # Registro de platillos
 
 ├── css/
-
 │ └── estilos.css
 
 ├── js/
-
 │ └── script.js
 
 ├── images/
-
-│ └── (logos)
+│ └── (logos, platillos)
 
 └── README.md
 
 
-## ¿Cómo usar?
 
-Navega entre las secciones para probar funcionalidades como:
+## ⚙️ ¿Cómo usar?
 
-Ver menú del día
+1. Clona el repositorio:  
+   git clone https://github.com/tu-usuario/la-cafe.git
+Abre el archivo index.html en tu navegador web.
 
-Personalizar pedido
+Explora las funcionalidades:
 
-Registrar platillos
+📋 Ver menú del día
 
-Enviar sugerencias
+🧾 Personalizar y enviar pedido
 
-👤 Autores: 
+🍛 Registrar nuevos platillos (admin)
 
-CORTES PEREZ IVAN ALEXANDER
+🗣️ Enviar sugerencias y calificaciones
 
-GALVAN GERMAN ALONDRA
+📸 Capturas de pantalla
+🧾 Menú interactivo
 
-GOMEZ BOLAINA HERIBERTO
+📦 Pedido personalizado
 
-LOPEZ CRUZ NELIDA
+💬 Sugerencias del usuario
 
-QUINTAS ROJAS ABRIL AZENETH
-
-**Universidad: Universidad del Mar**
+⚠️ Asegúrate de tener estas imágenes en la carpeta /images o actualiza las rutas si están en otro lugar.
 
 Contactos:
 
@@ -97,11 +95,6 @@ nelida.lopezcruz@aulavirtual.umar.mx
 [AbrilAz](https://github.com/AbrilAz)
 
 
-Opcion 1
-
-Sistema Web para La Café – Universidad del Mar © 2025 por Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto Lopez Cruz Nelida y Quintas Rojas Abril Azeneth tiene licencia CC BY-NC-SA 4.0
-
-opcion 2
 
 <footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
   <p>
