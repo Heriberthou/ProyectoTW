@@ -76,7 +76,7 @@ Explora las funcionalidades:
 ## 📸 Capturas de pantalla
 
 ### 🧾 Menú interactivo  
-<img src="imagenes/MuestraCapturaPantalla.png" alt="Captura del menú" width="300"/>
+<img src="imagenes/MuestraCapturaPantalla.png" alt="Captura del menú" width="100"/>
 
 ### 📦 Pedido personalizado  
 <img src="images/captura-pedido.jpg" alt="Formulario de pedido" width="600"/>
