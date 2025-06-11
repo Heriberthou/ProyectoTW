@@ -8,7 +8,7 @@ Con este sistema puedes:
 - Registrar nuevos platillos 👩‍🍳  
 - Enviar sugerencias y calificaciones ✍️
 
-> ✨ Una solución moderna, accesible y centrada en el usuario.
+> ✨ Creando soluciones para la comunidad universitaria del Mar.
 
 
 ## 🎯 Objetivo
@@ -127,12 +127,19 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ## 📁 Estructura del proyecto
 
 /la-cafe
+
 ├── index.html # Página principal
+
 ├── login.html # Inicio de sesión
+
 ├── registro.html # Registro de usuarios
+
 ├── menu.html # Menú principal
+
 ├── pedidos.html # Historial de pedidos
+
 ├── sugerencias.html # Modal de sugerencias
+
 ├── registrar-platillo.html # Registro de platillos
 
 ├── css/
@@ -188,7 +195,7 @@ Abre el archivo index.html en tu navegador web.
 
 **Galvan German Alondra - Desarrollador** [contacto](alondra.galvangerman@aulavirtual.umar.mx) 
 
-**Lopez Cruz Nelida - Desarrollador**  [contacto(nelida.lopezcruz@aulavirtual.umar.mx) 
+**Lopez Cruz Nelida - Desarrollador**  [contacto](nelida.lopezcruz@aulavirtual.umar.mx) 
 
 **Quintas Rojas Abril Azeneth - Desarrollador** [contacto](https://github.com/AbrilAz)
 
