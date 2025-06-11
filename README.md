@@ -73,8 +73,17 @@ Explora las funcionalidades:
 
 🗣️ Enviar sugerencias y calificaciones
 
-📸 Capturas de pantalla
-![Menú](imagenes/MuestraCapturaPantalla.png){width=300px}
+## 📸 Capturas de pantalla
+
+### 🧾 Menú interactivo  
+<img src="imagenes/MuestraCapturaPantalla.png" alt="Captura del menú" width="600"/>
+
+### 📦 Pedido personalizado  
+<img src="images/captura-pedido.jpg" alt="Formulario de pedido" width="600"/>
+
+### 💬 Sugerencias del usuario  
+<img src="images/captura-sugerencia.jpg" alt="Formulario de sugerencias" width="600"/>
+
 
 Contactos:
 
