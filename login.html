@@ -157,6 +157,18 @@
       background-color: #d4edda;
       color: #155724;
     }
+
+    .text-register .highlight-link {
+      color: #0c4e84;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .text-register .highlight-link:hover {
+      text-decoration: underline;
+    }
+
+
   </style>
 </head>
 <body>
@@ -193,7 +205,8 @@
         <button type="submit" class="btn-login">Iniciar Sesión</button>
 
         <a href="#" class="text-link">¿Olvidaste tu contraseña?</a>
-        <a href="inicio.html?registro=1" class="text-link">¿No tienes cuenta? Regístrate aquí.</a>
+        <a href="registro.html" class="text-link text-register">¿No tienes cuenta? <span class="highlight-link">Regístrate aquí</span>.</a>
+
 
         <div id="error-message" class="alert alert-danger">Usuario o contraseña incorrectos.</div>
         <div id="success-message" class="alert alert-success">¡Bienvenido! Has iniciado sesión correctamente.</div>
