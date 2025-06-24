@@ -199,7 +199,7 @@ Abre el archivo index.html en tu navegador web.
 
 👥 Autores:
 
-**Gomez Bolaina Heriberto - Desarrolador y Lider del proyecto**  [contacto](heriberto.gomezbolaina@aulavirtual.umar.mx)
+**Gomez Bolaina Heriberto - Lider del proyecto y desarrollador**  [contacto](heriberto.gomezbolaina@aulavirtual.umar.mx)
 
 **Cortes Perez Ivan Alexander -Desarrollador** [Contacto](ivanalexander.cortesperez@aulavirtual.umar.mx)
 
