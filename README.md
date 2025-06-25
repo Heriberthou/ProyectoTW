@@ -128,40 +128,49 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 /la-cafe
 │
 ├── index.html                     # Pantalla de bienvenida
-
+│
 ├── login.html                     # Inicio de sesión
-
+│
 ├── registro.html                  # Registro de usuarios
-
+│
 ├── menu.html                      # Menú principal
-
+│
 ├── pedidos.html                   #Especificacion del pedido 
-
+│
 ├── sugerencias.html              # Modal de sugerencias
-
+│
 ├── registrar-platillo.html       # Registro de platillos
-
+│
 ├── admin.html                    # Panel administrativo
-
+│
 ├── estados.html                  # Estado de pedidos o compras
-
+│
 ├── historial.html                # Historial de pedidos del usuario
-
+│
 ├── inicio.html                   # Inicio de sesion
-
+│
 ├── restablecerContraseña.html   # Recuperación de contraseña
 │
+│
 ├── css/
+
 │   └── estilos.css               # Hoja de estilos principal
 │
+│
 ├── js/
+
 │   └── script.js                 # Scripts generales
 │
+│
 ├── imagenes/
+
 │   └── inicio.png                # Imágenes del proyecto
 │
-├── .vscode/                      # Configuración del editor (opcional)
+│
+├── .vscode/                      # Configuración del editor
+
 ├── .gitattributes                # Config Git
+
 ├── README.md                     # Documentación del proyecto
 
 
