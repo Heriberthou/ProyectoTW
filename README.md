@@ -218,11 +218,11 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 
 **Gomez Bolaina Heriberto - Lider del proyecto y desarrollador**  [contacto](https://github.com/Heriberthou)
 
-**Cortes Perez Ivan Alexander -Desarrollador** [Contacto](ivanalexander.cortesperez@aulavirtual.umar.mx)
+**Cortes Perez Ivan Alexander -Desarrollador** [Contacto](https://github.com/Alex77071)
 
-**Galvan German Alondra - Desarrollador** [contacto](alondra.galvangerman@aulavirtual.umar.mx) 
+**Galvan German Alondra - Desarrollador** [contacto](https://github.com/alol-g)
 
-**Lopez Cruz Nelida - Desarrollador**  [contacto](nelida.lopezcruz@aulavirtual.umar.mx) 
+**Lopez Cruz Nelida - Desarrollador**  [contacto](https://github.com/NellyLop)
 
 **Quintas Rojas Abril Azeneth - Desarrollador** [contacto](https://github.com/AbrilAz)
 
