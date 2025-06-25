@@ -216,7 +216,7 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 
 👥 Autores:
 
-**Gomez Bolaina Heriberto - Lider del proyecto y desarrollador**  [contacto](heriberto.gomezbolaina@aulavirtual.umar.mx)
+**Gomez Bolaina Heriberto - Lider del proyecto y desarrollador**  [contacto](https://github.com/Heriberthou)
 
 **Cortes Perez Ivan Alexander -Desarrollador** [Contacto](ivanalexander.cortesperez@aulavirtual.umar.mx)
 
