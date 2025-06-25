@@ -155,17 +155,17 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ├── css/
 
 │   └── estilos.css               # Hoja de estilos principal
-│
+
 
 ├── js/
 
 │   └── script.js                 # Scripts generales
-│
+
 
 ├── imagenes/
 
 │   └── inicio.png                # Imágenes del proyecto
-│
+
 
 ├── .vscode/                      # Configuración del editor
 
@@ -183,19 +183,19 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
    
 1. Abre el archivo index.html en tu navegador web.
 
-  -Abre index.html en tu navegador.
+   -Abre index.html en tu navegador.
 
-  -Explora las funcionalidades:
+   -Explora las funcionalidades:
 
-  -Inicia sesión o regístrate.
+   -Inicia sesión o regístrate.
 
-  -Consulta el menú y realiza un pedido.
+   -Consulta el menú y realiza un pedido.
 
-  -Agrega productos al carrito.
+   -Agrega productos al carrito.
 
-  -Envía sugerencias.
+   -Envía sugerencias.
 
-  -Visualiza tu historial de pedidos.
+   -Visualiza tu historial de pedidos.
 
 ## 📸 Capturas de pantalla
 
