@@ -150,7 +150,6 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ├── inicio.html                   # Inicio de sesion
 
 ├── restablecerContraseña.html   # Recuperación de contraseña
-│
 
 ├── css/
 
