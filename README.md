@@ -127,7 +127,6 @@ Ofrecer una herramienta digital intuitiva, visual y funcional que facilite el pr
 ## 📁 Estructura del proyecto
 /la-cafe
 
-│
 ├── index.html                     # Pantalla de bienvenida
 
 ├── login.html                     # Inicio de sesión
